@@ -6,7 +6,13 @@ const config: Config = {
     "./src/components/**/*.{js,ts,jsx,tsx,mdx}",
   ],
   theme: {
-    extend: {},
+    extend: {
+      colors: {
+        green: {
+          50: '#848d97'
+        },
+      }
+    },
   },
   plugins: [],
 };
