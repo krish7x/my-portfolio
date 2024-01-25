@@ -9,9 +9,9 @@ const config: Config = {
     extend: {
       colors: {
         green: {
-          50: '#848d97'
+          50: "#848d97",
         },
-      }
+      },
     },
   },
   plugins: [],
