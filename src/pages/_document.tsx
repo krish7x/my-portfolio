@@ -10,6 +10,12 @@ export default function Document() {
           href="/krish.png"
         ></link>
       </Head>
+      <title>Krishna Kumar</title>
+      <meta name="description" content="Welcome to Krishnakumar's portfolio" />
+      <meta
+        name="keywords"
+        content="software engineer, portfolio, software developer, frontend developer"
+      />
       <body>
         <Main />
         <NextScript />
