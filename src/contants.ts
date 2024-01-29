@@ -34,12 +34,3 @@ export const WORK_EXPERIENCE = [
     description: LOREM_20,
   },
 ];
-
-export const BLOGS = [
-  {
-    title: "Introducing Monorepo: A single source of truth",
-    pubDate: "Jan 25 2024",
-    readDuration: "4 min read",
-    link: "https://medium.com/@krish7x/introducing-monorepo-a-single-source-of-truth-eb3e18a2a1f2",
-  },
-];

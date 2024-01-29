@@ -1,35 +1,40 @@
 import Header from "@/components/layouts/header";
 import { DefaultLayout } from "@/components/layouts";
 import { BlogCard } from "@/components/macros/blog-card";
-import { BLOGS } from "@/contants";
-//import { useState, useEffect } from "react";
+import { useState, useEffect, FC } from "react";
+
+interface IBlogItem {
+  title?: string;
+  pubDate?: string;
+  link?: string;
+}
 
 export default function Home() {
-  //const [blogs, setBlogs] = useState([]);
+  const [blogs, setBlogs] = useState<IBlogItem[]>([]);
 
-  //TODO: Later to check if it can be fetched from medium RSS
-  // useEffect(() => {
-  //   fetch(
-  //     "https://api.rss2json.com/v1/api.json?rss_url=https://medium.com/feed/caratlane-insider"
-  //   )
-  //     .then((resp) => resp.json())
-  //     .then((blogs) => setBlogs(blogs.items));
-  // }, []);
+  useEffect(() => {
+    fetch(
+      "https://api.rss2json.com/v1/api.json?rss_url=https://medium.com/feed/@krish7x"
+    )
+      .then((resp) => resp.json())
+      .then((blogs) => setBlogs(blogs.items));
+  }, []);
 
   return (
     <DefaultLayout>
       <Header />
       <div className="flex min-h-screen max-w-[872px] flex-col gap-3 md:gap-3">
-        {BLOGS.length &&
-          BLOGS.map((val, inx) => (
-            <BlogCard
-              key={"blog-" + inx}
-              title={val?.title}
-              pubslishedData={val?.pubDate}
-              readDuration="4 min read"
-              link={val?.link}
-            />
-          ))}
+        {blogs.length
+          ? blogs.map((val, inx) => (
+              <BlogCard
+                key={"blog-" + inx}
+                title={val?.title}
+                pubslishedData={val?.pubDate}
+                readDuration="4 min read"
+                link={val?.link}
+              />
+            ))
+          : null}
       </div>
     </DefaultLayout>
   );

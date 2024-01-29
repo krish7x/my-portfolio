@@ -6,10 +6,10 @@ export const BlogCard = ({
   readDuration,
   link = "/",
 }: {
-  title: string;
-  pubslishedData: string;
-  readDuration: string;
-  link: string;
+  title?: string;
+  pubslishedData?: string;
+  readDuration?: string;
+  link?: string;
 }) => (
   <Link href={link} className="relative mt-8">
     <div className="flex flex-col gap-2 w-full md:w-10/12 p-4 md:p-6 bg-blue-50 rounded-lg  hover:bg-blue-100 dark:bg-neutral-900  dark:hover:bg-neutral-800 cursor-pointer relative ring-1 ring-white/10 dark:shadow-[0_20px_207px_rgba(238,_130,_238,_0.2)]">
