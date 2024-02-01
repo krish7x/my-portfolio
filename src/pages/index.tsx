@@ -1,7 +1,11 @@
 import Header from "@/components/layouts/header";
 import { DefaultLayout } from "@/components/layouts";
 import { WorkCard } from "@/components/macros/work-card";
-import { CardDivider, Heading } from "@/components/micros";
+import {
+  WorkCardDivider,
+  Heading,
+  EducationCardDivider,
+} from "@/components/micros";
 import { EDUCATION, LOREM_50, WORK_EXPERIENCE } from "@/contants";
 import { EducationCard } from "@/components/macros/education-card";
 
@@ -26,7 +30,9 @@ export default function Home() {
             {WORK_EXPERIENCE.map((val, inx, self) => (
               <div key={"work-experience-card-" + inx}>
                 <WorkCard {...val} />
-                {self.length > 1 && self.length - 1 !== inx && <CardDivider />}
+                {self.length > 1 && self.length - 1 !== inx && (
+                  <WorkCardDivider />
+                )}
               </div>
             ))}
           </div>
@@ -35,7 +41,7 @@ export default function Home() {
         {/* Education  */}
         <div className="relative flex flex-col gap-6">
           <Heading text="Education 🎓" />
-          <div className="absolute flex flex-1 w-2 h-5/6 left-1/2 top-14 bg-blue-600" />
+          <EducationCardDivider />
           <div className="flex flex-col gap-12">
             {EDUCATION.map((val, inx) => (
               <div
