@@ -34,3 +34,24 @@ export const WORK_EXPERIENCE = [
     description: LOREM_20,
   },
 ];
+
+export const EDUCATION = [
+  {
+    yrsOfStudies: "2019 - 2021",
+    designation: "Master of Computer Applications (M.C.A)",
+    institueName: "Dwaraka Doss Goverdhan Doss Vaishnav College",
+    location: "Chennai, Tamil Nadu",
+  },
+  {
+    yrsOfStudies: "2016 - 2019",
+    designation: "Bachelor of Computer Applications (B.C.A)",
+    institueName: "Dwaraka Doss Goverdhan Doss Vaishnav College",
+    location: "Chennai, Tamil Nadu",
+  },
+  {
+    yrsOfStudies: "2016",
+    designation: "Higher Secondary",
+    institueName: "St.Thomas Matriculation & Hr.sec school",
+    location: "Chennai, Tamil Nadu",
+  }
+]
