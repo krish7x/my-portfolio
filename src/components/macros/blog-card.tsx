@@ -17,7 +17,7 @@ export const BlogCard = ({
         {title}
       </h2>
       <p className="leading-5 md:leading-6 text-slate-600 dark:text-green-50 text-xs md:text-sm">
-        {pubslishedData} . {readDuration}
+        {pubslishedData?.split(" ")[0]} . {readDuration}
       </p>
     </div>
   </Link>
