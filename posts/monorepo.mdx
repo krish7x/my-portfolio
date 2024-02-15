@@ -1,0 +1,113 @@
+---
+title: Click me!
+date: 2022-02-28
+---
+
+# Introducing Monorepo: A single source of truth
+
+By **Krishnakumar Ganesh** - “A Tech Enthusiast”
+
+Hey, fellow tech enthusiasts! 🚀 Ready to spice up your coding journey? Buckle in as we take a funky dive into the mesmerizing world of Monorepos! 💻✨ In this article, we're demystifying the buzz around Monorepos and uncovering the secrets that make them the cool kids on the code block.
+
+![monorepo.png](Introducing%20Monorepo%20A%20single%20source%20of%20truth%205df2cf8cadef418881d10c792273b1bf/monorepo.png)
+
+Monorepo, an abbreviation for monolithic repository, serves as a comprehensive version control system that contains multiple projects or codebases within a single repository. It contrasts with managing individual repositories for each project, a concept often referred to as a polyrepo. Monorepos are often used to manage large-scale software development, allowing shared code, dependencies, and consistent versioning across projects.
+
+
+## Why Monorepo and What problems does it solve?
+
+[https://giphy.com/embed/gd09Y2Ptu7gsiPVUrv](https://giphy.com/embed/gd09Y2Ptu7gsiPVUrv)
+
+Considering the adoption of a Monorepo in software development involves weighing various factors, based on the project requirements, the decision can be taken. Here are some of the reason to adopt monorepo in your next project or to migrate an existing one.
+
+### Visibility
+
+Monorepo grants unparalleled visibility, allowing developers to navigate and learn from code across diverse projects, which we can endure to go through and learn from others code. It provides a great cross-team collaboration, working with different team on a same or different problem statements.
+
+### **Code Sharing and Re-usability**
+
+Enables easy sharing of code and libraries among different projects within the monorepo. This promotes code reuse and consistency across the organization.
+
+### **Atomic commits across projects**
+
+Developers can make atomic changes across multiple projects simultaneously. This helps in maintaining consistency and reduces the risk of breaking changes in a distributed system.
+
+### **Consistent Versioning**
+
+It facilitates consistent versioning across projects. All projects within the monorepo can share a common versioning scheme, making it easier to track and manage dependencies.
+
+### **Centralized Configuration**
+
+Configuration settings, such as build configurations, linters, and testing setups, can be centralized, ensuring consistency across projects.
+
+### **Effective CI/CD Pipelines**
+
+Efficiency reigns supreme in CI/CD processes when orchestrated from a single repository, ensuring efficient testing, building, and deployment across the entire codebase.
+
+## Monolith vs Microservice vs Monorepo
+
+![hsiu7azaac7tzibnn976.png](Introducing%20Monorepo%20A%20single%20source%20of%20truth%205df2cf8cadef418881d10c792273b1bf/hsiu7azaac7tzibnn976.png)
+
+### **Monolith**
+
+In a monolith, components such as the admin panel and website are tightly coupled within a single codebase. Changes to one part may affect the entire system, highlighting the unified nature of a monolithic architecture.
+
+### **Microservice**
+
+Alternatively, adopting a microservices architecture sees the admin and website as separate entities, residing in different Git repositories. This fosters modularity but introduces the challenge of managing distributed codebases.
+
+### **Monorepo**
+
+Embracing the monorepo philosophy, both the admin and website exist as separate projects under the same repository. This approach offers a centralized yet modular solution, encouraging collaboration without sacrificing version control.
+
+Each architecture has its merits and considerations, shaping the development journey in unique ways. As we explore these options, it's essential to understand their implications on scalability, collaboration, and codebase management.
+
+## Which major tech companies have embraced the Monorepo approach?
+
+![companies.png](Introducing%20Monorepo%20A%20single%20source%20of%20truth%205df2cf8cadef418881d10c792273b1bf/companies.png)
+
+### **Google**
+
+Google is one of the pioneers in adopting the monorepo model. They manage a vast codebase, including various projects and services, within a single repository.
+
+### **Facebook**
+
+Facebook, now Meta, utilizes a monorepo to manage the code for its diverse range of products and services, including the main Facebook platform, Instagram, and WhatsApp. It also includes the code for various projects, including React, Jest, and other internal tools.
+
+### **Microsoft**
+
+Microsoft has embraced a monorepo approach to manage the code for products such as Windows, Office, and Azure, promoting collaboration and consistency.
+
+### **Twitter**
+
+Twitter has adopted a monorepo structure for managing its codebase, allowing different teams to work collaboratively on various projects.
+
+## Limitations of Monorepo
+
+### **Scalability**
+
+As the codebase grows, managing a monorepo can become challenging. The size of the repository may impact performance, including slower clone times and increased storage requirements.
+
+### Lack of per-project access control
+
+In a scenario with separate repositories, access to a repository can be tailored according to specific requirements. However, in a monorepo, granting read access extends to all software within the project, potentially introducing new security challenges.
+
+### **Merge Conflicts**
+
+With multiple contributors working on different parts of the codebase, merge conflicts can be more frequent and challenging to resolve, requiring effective coordination.
+
+### **CI/CD Challenges**
+
+Coordinating CI/CD processes across multiple projects can be complex. Ensuring that changes in one project do not break others requires careful configuration.
+
+### **Build Times**
+
+Building the entire monorepo can result in longer build times, especially if not properly optimized. This can affect developer productivity and CI/CD pipeline efficiency.
+
+### **Tooling Compatibility**
+
+Some tools and integrations may not be optimized for monorepos, potentially leading to compatibility issues or the need for custom solutions.
+
+## **Conclusion
+
+In the dance of code management, choosing between a monorepo and separate repositories is a rhythmic decision, each with its own beat of pros and cons. It's like picking a dance partner—finding the one that syncs seamlessly with your rhythm. 🕺💃 Your organization's needs play the DJ, crafting the soundtrack for your unique development journey. Stay tuned for more insights, as we groove into real-time monorepo examples and unveil the toolkit in the next blog! 🚀🎶
