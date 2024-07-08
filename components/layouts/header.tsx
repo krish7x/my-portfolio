@@ -10,7 +10,6 @@ export default function Header() {
   const pathname = usePathname();
   return (
     <div className="flex justify-between w-full h-50 align-middle">
-      <ModeToggle />
       <div className="w-52 h-full align-middle">
         {pathname === "/" ? (
           <Image

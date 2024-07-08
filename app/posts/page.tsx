@@ -16,7 +16,7 @@ export default function Home() {
   return (
     <DefaultLayout>
       <Header />
-      <div className="flex min-h-screen max-w-[872px] flex-col gap-1">
+      <div className="flex min-h-screen max-w-[872px] flex-col gap-6">
         {allPosts.map((post) => (
           <PostCard
             key={post._id}
