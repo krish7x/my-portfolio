@@ -1,10 +1,12 @@
+"use client";
+
 import Image from "next/image";
 import Link from "next/link";
-import { useRouter } from "next/router";
-import { ROUTES } from "@/contants";
+import { usePathname } from "next/navigation";
+import { ROUTES } from "../../contants";
 
 export default function Header() {
-  const { pathname } = useRouter();
+  const pathname = usePathname();
   return (
     <div className="flex justify-between w-full h-50 align-middle">
       <div className="w-52 h-full align-middle">

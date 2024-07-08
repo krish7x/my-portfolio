@@ -1,3 +1,5 @@
+"use client";
+
 import Header from "@/components/layouts/header";
 import { DefaultLayout } from "@/components/layouts";
 import { BlogCard } from "@/components/macros/blog-card";
