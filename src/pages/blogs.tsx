@@ -24,7 +24,7 @@ export default function Home() {
     <DefaultLayout>
       <Header />
       <div className="flex min-h-screen max-w-[872px] flex-col gap-3 md:gap-3">
-        {blogs.length
+        {blogs?.length
           ? blogs.map((val, inx) => (
               <BlogCard
                 key={"blog-" + inx}
