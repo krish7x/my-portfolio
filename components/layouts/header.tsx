@@ -21,7 +21,7 @@ export default function Header() {
         <ModeToggle />
         <div className="flex gap-2">
           <Tabs
-            size="sm"
+            size="md"
             aria-label="Dynamic tabs"
             onSelectionChange={(id: Key) => {
               setPath(id as string);

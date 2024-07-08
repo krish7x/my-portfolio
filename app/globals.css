@@ -21,3 +21,19 @@
     text-wrap: balance;
   }
 }
+
+.prose pre {
+  background-color: #f5f5f5;
+  color: #333;
+  padding: 1em;
+  border-radius: 0.5em;
+  overflow-x: auto;
+}
+
+.dark .prose pre {
+  background-color: #282a36; /* Dracula background color */
+  color: #f8f8f2; /* Dracula foreground color */
+  padding: 1em;
+  border-radius: 0.5em;
+  overflow-x: auto;
+}
