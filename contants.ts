@@ -9,8 +9,8 @@ export const ROUTES = [
     path: "/",
   },
   {
-    text: "Blogs",
-    path: "/blogs",
+    text: "Posts",
+    path: "/posts",
   },
 ];
 
