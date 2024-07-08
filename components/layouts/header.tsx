@@ -1,15 +1,40 @@
 "use client";
 
 import Image from "next/image";
-import Link from "next/link";
-import { usePathname } from "next/navigation";
+import { usePathname, useRouter } from "next/navigation";
 import { ROUTES } from "../../contants";
 import { ModeToggle } from "../micros/mode-toggle";
+import { Tab, Tabs } from "@nextui-org/react";
+import { Key, useEffect, useState } from "react";
 
 export default function Header() {
+  const [path, setPath] = useState("/");
   const pathname = usePathname();
+  const router = useRouter();
+
+  useEffect(() => {
+    setPath(pathname);
+  }, [path, pathname, router]);
   return (
-    <div className="flex justify-between w-full h-50 align-middle">
+    <div className="flex flex-col w-full h-50 gap-12">
+      <div className="flex justify-between align-middle">
+        <ModeToggle />
+        <div className="flex gap-2">
+          <Tabs
+            size="sm"
+            aria-label="Dynamic tabs"
+            onSelectionChange={(id: Key) => {
+              setPath(id as string);
+              router.push(`${id}`);
+            }}
+            selectedKey={path}
+          >
+            {ROUTES.map(({ text, path }) => (
+              <Tab key={path} title={text} />
+            ))}
+          </Tabs>
+        </div>
+      </div>
       <div className="w-52 h-full align-middle">
         {pathname === "/" ? (
           <Image
@@ -23,35 +48,7 @@ export default function Header() {
             width={200}
             height={200}
           />
-        ) : (
-          <Image
-            src="/krish.png"
-            alt="avatar"
-            width={30}
-            height={30}
-            objectFit="contain"
-            className="w-12 h-12 rounded-full"
-          />
-        )}
-      </div>
-      <div className="flex gap-2 h-8">
-        {ROUTES.map(({ text, path }, inx, self) => (
-          <div className="flex gap-2" key={"nav-link-" + inx}>
-            <Link
-              className={` hover:text-stone-600 dark:hover:text-neutral-300 text-sm ${
-                path === pathname
-                  ? "text-slate-900 font-semibold dark:text-neutral-100 cursor-not-allowed"
-                  : "text-slate-800 dark:text-neutral-400"
-              }`}
-              href={path}
-            >
-              {text}
-            </Link>
-            <span className="text-slate-800 dark:text-neutral-100 text-sm">
-              {inx < self.length - 1 ? "/" : ""}
-            </span>
-          </div>
-        ))}
+        ) : null}
       </div>
     </div>
   );
