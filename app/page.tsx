@@ -14,12 +14,12 @@ export default function Home() {
       <h1 className="text-slate-800 dark:text-neutral-100 text-lg md:text-xl">
         Hi, I am Krishna Kumar 👋
       </h1>
-      <h2 className="leading-6 text-slate-800 dark:text-neutral-400 text-xs md:text-sm">
+      <h2 className="leading-6 text-slate-800 dark:text-neutral-400 text-xs md:text-sm mt-2">
         {LOREM_50}
       </h2>
 
       {/* body section */}
-      <div className="flex flex-col gap-12">
+      <div className="flex flex-col gap-12 mt-8">
         {/* Work Experience */}
         <div className="flex flex-col gap-6">
           <Heading text="Work Experience 💼" />
