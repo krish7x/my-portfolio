@@ -55,3 +55,131 @@ export const EDUCATION = [
     location: "Chennai, Tamil Nadu",
   },
 ];
+
+export const SKILLS = [
+  {
+    heading: "Languages",
+    skills: [
+      {
+        icon: "java.svg",
+        name: "Java",
+      },
+      {
+        icon: "js.svg",
+        name: "JavaScript",
+      },
+      {
+        icon: "ts.svg",
+        name: "TypeScript",
+      },
+      {
+        icon: "ruby.svg",
+        name: "Ruby",
+      },
+    ],
+  },
+  {
+    heading: "Frontend",
+    skills: [
+      {
+        icon: "react.svg",
+        name: "React",
+      },
+      {
+        icon: "next.svg",
+        name: "NextJS",
+      },
+      {
+        icon: "react-native.svg",
+        name: "React Native",
+      },
+      {
+        icon: "tailwind.svg",
+        name: "Tailwind CSS",
+      },
+      {
+        icon: "styled-components.svg",
+        name: "Styled Components",
+      },
+      {
+        icon: "redux.svg",
+        name: "Redux",
+      },
+      {
+        icon: "jotai.svg",
+        name: "Jotai",
+      },
+      {
+        icon: "react-query.svg",
+        name: "React Query",
+      },
+    ],
+  },
+  {
+    heading: "Backend",
+    skills: [
+      {
+        icon: "sprint-boot.svg",
+        name: "Spring Boot",
+      },
+      {
+        icon: "nodejs.svg",
+        name: "NodeJs",
+      },
+      {
+        icon: "nestjs.svg",
+        name: "NestJs",
+      },
+      {
+        icon: "ror.svg",
+        name: "Ruby on Rails",
+      },
+      {
+        icon: "kafka.svg",
+        name: "Apache Kafka",
+      },
+      {
+        icon: "graphql.svg",
+        name: "GraphQL",
+      },
+      {
+        icon: "jest.svg",
+        name: "Jest",
+      },
+    ],
+  },
+  {
+    heading: "Databases",
+    skills: [
+      {
+        icon: "mysql.svg",
+        name: "MySQL",
+      },
+      {
+        icon: "mongo.svg",
+        name: "MongoDB",
+      },
+      {
+        icon: "postgres.svg",
+        name: "PostgresSQL",
+      },
+    ],
+  },
+  {
+    heading: "DevOps",
+    skills: [
+      {
+        icon: "docker.svg",
+        name: "Docker",
+      },
+      {
+        icon: "jenkins.svg",
+        name: "Jenkins",
+      },
+      {
+        icon: "kubernetes.svg",
+        name: "Kubernetes",
+      },
+    ],
+  },
+];

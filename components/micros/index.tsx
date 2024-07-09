@@ -1,6 +1,13 @@
 export const Heading = ({ text }: { text: string }) => (
   <h1 className="text-xl text-slate-800 dark:text-neutral-100">{text}</h1>
 );
+
+export const SubHeading = ({ text }: { text: string }) => (
+  <h1 className="text-sm font-semibold text-slate-800 dark:text-neutral-100">
+    {text}
+  </h1>
+);
+
 export const WorkCardDivider = () => (
   <div className="ml-4 h-12 w-2 bg-blue-600 md:ml-5" />
 );

@@ -3,9 +3,11 @@ import { WorkCard } from "@/components/macros/work-card";
 import {
   EducationCardDivider,
   Heading,
+  SubHeading,
   WorkCardDivider,
 } from "@/components/micros";
-import { EDUCATION, LOREM_50, WORK_EXPERIENCE } from "@/contants";
+import { EDUCATION, LOREM_50, SKILLS, WORK_EXPERIENCE } from "@/contants";
+import { Avatar, Chip } from "@nextui-org/react";
 
 export default function Home() {
   return (
@@ -48,6 +50,47 @@ export default function Home() {
                 }`}
               >
                 <EducationCard {...val} />
+              </div>
+            ))}
+          </div>
+        </div>
+
+        <div className="relative flex flex-col">
+          <Heading text="Skills 🚀" />
+          <div className="mt-6 flex flex-col gap-8">
+            {SKILLS.map(({ heading, skills }, inx) => (
+              <div
+                key={"skill-" + inx}
+                className="flex w-full flex-col gap-4"
+              >
+                <SubHeading text={heading} />
+                <div className="flex flex-wrap gap-x-4 gap-y-5">
+                  {skills.map(val => (
+                    <Chip
+                      key={val.name}
+                      color="secondary"
+                      variant="shadow"
+                      classNames={{
+                        base: "bg-blue-50 dark:bg-neutral-900 py-4 px-2",
+                        content:
+                          "font-semibold text-xs text-cyan-950 dark:text-slate-100",
+                      }}
+                      avatar={
+                        val.icon ? (
+                          <Avatar
+                            name="JW"
+                            src={val.icon}
+                            classNames={{
+                              base: "bg-transparent",
+                            }}
+                          />
+                        ) : null
+                      }
+                    >
+                      {val.name}
+                    </Chip>
+                  ))}
+                </div>
               </div>
             ))}
           </div>
