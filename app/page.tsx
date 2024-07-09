@@ -7,7 +7,7 @@ import {
   WorkCardDivider,
 } from "@/components/micros";
 import { EDUCATION, LOREM_50, SKILLS, WORK_EXPERIENCE } from "@/contants";
-import { Avatar, Chip } from "@nextui-org/react";
+import { Chip } from "@nextui-org/react";
 import Image from "next/image";
 
 export default function Home() {
