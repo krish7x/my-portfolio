@@ -13,8 +13,12 @@ export default function Header() {
   const router = useRouter();
 
   useEffect(() => {
-    setPath(pathname);
+    const pathArr = pathname.split("/");
+    if (pathArr.length < 3) {
+      setPath(pathname);
+    }
   }, [path, pathname, router]);
+
   return (
     <div className="flex flex-col w-full h-50 gap-12">
       <div className="flex justify-between align-middle">
@@ -22,7 +26,6 @@ export default function Header() {
         <div className="flex gap-2">
           <Tabs
             size="md"
-            aria-label="Dynamic tabs"
             onSelectionChange={(id: Key) => {
               setPath(id as string);
               router.push(`${id}`);

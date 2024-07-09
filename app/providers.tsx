@@ -11,7 +11,7 @@ export interface ProvidersProps {
   themeProps?: ThemeProviderProps;
 }
 
-export function ThemeProvider({ children, ...themeProps }: ProvidersProps) {
+export function ThemeProvider({ children }: ProvidersProps) {
   const router = useRouter();
   return (
     <NextUIProvider navigate={router.push}>

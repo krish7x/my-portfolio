@@ -1,5 +1,3 @@
-import Header from "@/components/layouts/header";
-import { DefaultLayout } from "@/components/layouts";
 import { WorkCard } from "@/components/macros/work-card";
 import {
   WorkCardDivider,
@@ -11,9 +9,8 @@ import { EducationCard } from "@/components/macros/education-card";
 
 export default function Home() {
   return (
-    <DefaultLayout>
+    <>
       {/* hero section */}
-      <Header />
       <h1 className="text-slate-800 dark:text-neutral-100 text-lg md:text-xl">
         Hi, I am Krishna Kumar 👋
       </h1>
@@ -56,6 +53,6 @@ export default function Home() {
           </div>
         </div>
       </div>
-    </DefaultLayout>
+    </>
   );
 }
