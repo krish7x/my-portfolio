@@ -1,5 +1,6 @@
 import { DefaultLayout } from "@/components/layouts";
 import Header from "@/components/layouts/header";
+import { ScrollTop } from "@/components/micros/scroll-top";
 import { Inter } from "next/font/google";
 
 import { Analytics } from "./analytics";
@@ -41,6 +42,7 @@ export default function RootLayout({ children }: RootLayoutProps) {
             </DefaultLayout>
             <Analytics />
           </div>
+          <ScrollTop />
         </ThemeProvider>
       </body>
     </html>

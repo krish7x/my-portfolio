@@ -119,7 +119,7 @@ export const SKILLS = [
     heading: "Backend",
     skills: [
       {
-        icon: "sprint-boot.svg",
+        icon: "spring-boot.svg",
         name: "Spring Boot",
       },
       {
