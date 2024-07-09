@@ -53,5 +53,5 @@ export const EDUCATION = [
     designation: "Higher Secondary",
     institueName: "St.Thomas Matriculation & Hr.sec school",
     location: "Chennai, Tamil Nadu",
-  }
-]
+  },
+];

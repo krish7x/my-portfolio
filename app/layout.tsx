@@ -1,9 +1,10 @@
-import "./globals.css";
-import { Inter } from "next/font/google";
-import { ThemeProvider } from "./providers";
-import { Analytics } from "./analytics";
 import { DefaultLayout } from "@/components/layouts";
 import Header from "@/components/layouts/header";
+import { Inter } from "next/font/google";
+
+import { Analytics } from "./analytics";
+import "./globals.css";
+import { ThemeProvider } from "./providers";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -30,10 +31,10 @@ export default function RootLayout({ children }: RootLayoutProps) {
         ></link>
       </head>
       <body
-        className={`antialiased bg-white dark:bg-slate-950  text-slate-900 dark:text-slate-50 ${inter.className}`}
+        className={`bg-white text-slate-900 antialiased dark:bg-slate-950 dark:text-slate-50 ${inter.className}`}
       >
         <ThemeProvider>
-          <div className="max-w-2xl mx-auto py-10 px-4">
+          <div className="mx-auto max-w-2xl px-4 py-10">
             <DefaultLayout>
               <Header />
               <main>{children}</main>

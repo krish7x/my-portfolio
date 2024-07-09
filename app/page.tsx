@@ -1,25 +1,25 @@
+import { EducationCard } from "@/components/macros/education-card";
 import { WorkCard } from "@/components/macros/work-card";
 import {
-  WorkCardDivider,
-  Heading,
   EducationCardDivider,
+  Heading,
+  WorkCardDivider,
 } from "@/components/micros";
 import { EDUCATION, LOREM_50, WORK_EXPERIENCE } from "@/contants";
-import { EducationCard } from "@/components/macros/education-card";
 
 export default function Home() {
   return (
     <>
       {/* hero section */}
-      <h1 className="text-slate-800 dark:text-neutral-100 text-lg md:text-xl">
+      <h1 className="text-lg text-slate-800 dark:text-neutral-100 md:text-xl">
         Hi, I am Krishna Kumar 👋
       </h1>
-      <h2 className="leading-6 text-slate-800 dark:text-neutral-400 text-xs md:text-sm mt-2">
+      <h2 className="mt-2 text-xs leading-6 text-slate-800 dark:text-neutral-400 md:text-sm">
         {LOREM_50}
       </h2>
 
       {/* body section */}
-      <div className="flex flex-col gap-12 mt-8">
+      <div className="mt-8 flex flex-col gap-12">
         {/* Work Experience */}
         <div className="flex flex-col gap-6">
           <Heading text="Work Experience 💼" />

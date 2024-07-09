@@ -1,8 +1,7 @@
-import { notFound } from "next/navigation";
-import { allPosts } from "contentlayer/generated";
-
-import { Metadata } from "next";
 import { Mdx } from "@/components/layouts/mdx-components";
+import { allPosts } from "contentlayer/generated";
+import { Metadata } from "next";
+import { notFound } from "next/navigation";
 
 interface PostProps {
   params: {
@@ -12,7 +11,7 @@ interface PostProps {
 
 async function getPostFromParams(params: PostProps["params"]) {
   const slug = params?.slug?.join("/");
-  const post = allPosts.find((post) => post.slugAsParams === slug);
+  const post = allPosts.find(post => post.slugAsParams === slug);
 
   if (!post) {
     null;
@@ -37,7 +36,7 @@ export async function generateMetadata({
 }
 
 export async function generateStaticParams(): Promise<PostProps["params"][]> {
-  return allPosts.map((post) => ({
+  return allPosts.map(post => ({
     slug: post.slugAsParams.split("/"),
   }));
 }
@@ -53,7 +52,7 @@ export default async function PostPage({ params }: PostProps) {
     <article className="prose dark:prose-invert">
       <h1 className="mb-2">{post.title}</h1>
       {post.description && (
-        <p className="text-xl mt-4 text-slate-700 dark:text-slate-200">
+        <p className="mt-4 text-xl text-slate-700 dark:text-slate-200">
           {post.description}
         </p>
       )}

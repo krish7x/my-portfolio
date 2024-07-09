@@ -1,21 +1,15 @@
 "use client";
 
-import { PostCard } from "@/components/macros/post-card";
 import { allPosts } from "@/.contentlayer/generated";
+import { PostCard } from "@/components/macros/post-card";
 import { format } from "date-fns";
-
-interface IPostItem {
-  title?: string;
-  pubDate?: string;
-  link?: string;
-}
 
 export default function Home() {
   return (
     <>
       <div className="md:max-w-[872px]">
         <div className="mt-4 flex flex-col gap-5">
-          {allPosts.map((post) => (
+          {allPosts.map(post => (
             <PostCard
               key={post._id}
               title={post.title}

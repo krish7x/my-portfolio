@@ -1,11 +1,12 @@
 "use client";
 
+import { Avatar, Tab, Tabs } from "@nextui-org/react";
 import Image from "next/image";
 import { usePathname, useRouter } from "next/navigation";
+import { Key, useEffect, useState } from "react";
+
 import { ROUTES } from "../../contants";
 import { ModeToggle } from "../micros/mode-toggle";
-import { Avatar, Tab, Tabs } from "@nextui-org/react";
-import { Key, useEffect, useState } from "react";
 
 export default function Header() {
   const [path, setPath] = useState("/");
@@ -24,11 +25,14 @@ export default function Header() {
   }, [path, pathname, router]);
 
   return (
-    <div className="flex flex-col w-full h-50 gap-12">
+    <div className="h-50 flex w-full flex-col gap-12">
       <div className="flex justify-between align-middle">
-        <div className="flex align-middle gap-2">
+        <div className="flex gap-2 align-middle">
           {pathname !== "/" && (
-            <Avatar src="/krish.png" onClick={() => router.push("/")} />
+            <Avatar
+              src="/krish.png"
+              onClick={() => router.push("/")}
+            />
           )}
           <ModeToggle />
         </div>
@@ -43,13 +47,16 @@ export default function Header() {
               selectedKey={path}
             >
               {ROUTES.map(({ text, path }) => (
-                <Tab key={path} title={text} />
+                <Tab
+                  key={path}
+                  title={text}
+                />
               ))}
             </Tabs>
           </div>
         )}
       </div>
-      <div className="w-52 h-full align-middle">
+      <div className="h-full w-52 align-middle">
         {pathname === "/" ? (
           <Image
             src="/krish.png"
