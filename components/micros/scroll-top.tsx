@@ -36,11 +36,11 @@ export function ScrollTop() {
       <Button
         size="lg"
         isIconOnly
-        color="secondary"
         aria-label="Scroll to top"
         onClick={scrollToTop}
+        className="bg-custom1 dark:bg-secondary"
       >
-        <ChevronUp />
+        <ChevronUp className="stroke-white" />
       </Button>
     </div>
   );

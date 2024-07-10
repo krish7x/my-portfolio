@@ -19,6 +19,7 @@ module.exports = {
         darkBlue: {
           50: "#1C172E",
         },
+        custom1: "#322C2B",
       },
     },
   },
