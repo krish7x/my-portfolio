@@ -1,3 +1,5 @@
+"use client";
+
 import { EducationCard } from "@/components/macros/education-card";
 import { WorkCard } from "@/components/macros/work-card";
 import {

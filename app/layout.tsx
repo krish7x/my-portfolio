@@ -7,7 +7,11 @@ import { Analytics } from "./analytics";
 import "./globals.css";
 import { ThemeProvider } from "./providers";
 
-const inter = Inter({ subsets: ["latin"] });
+const inter = Inter({
+  subsets: ["latin"],
+  variable: "--font-inter", // Add a CSS variable to use in your styles
+  display: "swap",
+});
 
 export const metadata = {
   title: "Krishna Kumar",
@@ -32,7 +36,7 @@ export default function RootLayout({ children }: RootLayoutProps) {
         ></link>
       </head>
       <body
-        className={`bg-white text-slate-900 antialiased dark:bg-slate-950 dark:text-slate-50 ${inter.className}`}
+        className={`bg-white text-slate-900 antialiased dark:bg-slate-900 dark:text-slate-50 ${inter.className}`}
       >
         <ThemeProvider>
           <div className="mx-auto max-w-2xl px-4 py-10">
