@@ -34,6 +34,7 @@ export function ScrollTop() {
   return (
     <div className="fixed bottom-5 right-5 z-10">
       <Button
+        size="lg"
         isIconOnly
         color="secondary"
         aria-label="Scroll to top"

@@ -39,7 +39,7 @@ export default function RootLayout({ children }: RootLayoutProps) {
         className={`bg-white text-slate-900 antialiased dark:bg-slate-900 dark:text-slate-50 ${inter.className}`}
       >
         <ThemeProvider>
-          <div className="mx-auto max-w-2xl px-4 py-10">
+          <div className="mdpy-10 mx-auto max-w-2xl px-4 py-6">
             <DefaultLayout>
               <Header />
               <main>{children}</main>
