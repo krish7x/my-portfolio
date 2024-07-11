@@ -37,3 +37,8 @@
   border-radius: 0.5em;
   overflow-x: auto;
 }
+
+[data-overlay-container="true"] {
+  height: 100%;
+  width: 100%;
+}

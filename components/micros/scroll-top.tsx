@@ -1,8 +1,8 @@
 "use client";
 
 import { Button } from "@nextui-org/react";
-import { ChevronUp } from "lucide-react";
 import { useEffect, useState } from "react";
+import { BiChevronUp } from "react-icons/bi";
 
 export function ScrollTop() {
   const [show, setShow] = useState(false);
@@ -32,15 +32,18 @@ export function ScrollTop() {
   }
 
   return (
-    <div className="fixed bottom-5 right-5 z-10">
+    <div className="fixed bottom-5 right-5 z-10 md:right-40">
       <Button
         size="lg"
         isIconOnly
         aria-label="Scroll to top"
         onClick={scrollToTop}
-        className="bg-custom1 dark:bg-secondary"
+        className="bg-custom1 dark:bg-primary"
       >
-        <ChevronUp className="stroke-white" />
+        <BiChevronUp
+          size={24}
+          className="fill-white"
+        />
       </Button>
     </div>
   );

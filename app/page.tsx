@@ -1,16 +1,15 @@
 "use client";
 
 import { EducationCard } from "@/components/macros/education-card";
+import Skills from "@/components/macros/skills";
+import Social from "@/components/macros/social";
 import { WorkCard } from "@/components/macros/work-card";
 import {
   EducationCardDivider,
   Heading,
-  SubHeading,
   WorkCardDivider,
 } from "@/components/micros";
-import { EDUCATION, LOREM_50, SKILLS, WORK_EXPERIENCE } from "@/contants";
-import { Chip } from "@nextui-org/react";
-import Image from "next/image";
+import { EDUCATION, LOREM_50, WORK_EXPERIENCE } from "@/contants";
 
 export default function Home() {
   return (
@@ -43,8 +42,8 @@ export default function Home() {
         {/* Education  */}
         <div className="relative flex flex-col gap-6">
           <Heading text="Education 🎓" />
-          <EducationCardDivider />
           <div className="flex flex-col gap-12">
+            <EducationCardDivider />
             {EDUCATION.map((val, inx) => (
               <div
                 key={"work-experience-card-" + inx}
@@ -58,43 +57,14 @@ export default function Home() {
           </div>
         </div>
 
+        {/* Skills */}
         <div className="relative flex flex-col">
           <Heading text="Skills 🚀" />
-          <div className="mt-6 flex flex-col gap-8">
-            {SKILLS.map(({ heading, skills }, inx) => (
-              <div
-                key={"skill-" + inx}
-                className="flex w-full flex-col gap-4"
-              >
-                <SubHeading text={heading} />
-                <div className="flex flex-wrap gap-x-4 gap-y-5">
-                  {skills.map(val => (
-                    <Chip
-                      key={val.name}
-                      color="secondary"
-                      variant="shadow"
-                      classNames={{
-                        base: "bg-white dark:bg-neutral-900 py-4 px-2 flex",
-                        content:
-                          "font-semibold text-xs text-cyan-950 dark:text-slate-100",
-                      }}
-                    >
-                      <div className="flex items-center justify-center gap-2">
-                        <Image
-                          src={val.icon}
-                          height={20}
-                          width={20}
-                          alt={val.name}
-                        />
-                        <span>{val.name}</span>
-                      </div>
-                    </Chip>
-                  ))}
-                </div>
-              </div>
-            ))}
-          </div>
+          <Skills />
         </div>
+
+        {/* Desktop social */}
+        <Social />
       </div>
     </>
   );
