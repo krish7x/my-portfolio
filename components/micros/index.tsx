@@ -14,7 +14,7 @@ export const Heading = ({ text }: { text: string }) => {
       <h1 className="text-2xl font-semibold text-slate-800 dark:text-neutral-100">
         {text}
       </h1>
-      <Divider className={`bg-custom2 my-4 h-[calc(2px)] ${dividerWidth}`} />
+      <Divider className={`my-4 h-[calc(2px)] bg-custom2 ${dividerWidth}`} />
     </div>
   );
 };
@@ -33,7 +33,7 @@ export const SubHeading = ({ text }: { text: string }) => {
       <h1 className="text-lg font-semibold text-slate-800 dark:text-neutral-100">
         {text}
       </h1>
-      <Divider className={`bg-custom2 my-2 ${dividerWidth}`} />
+      <Divider className={`my-2 bg-custom2 ${dividerWidth}`} />
     </div>
   );
 };
