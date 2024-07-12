@@ -19,7 +19,7 @@ export const DefaultLayout = ({ children }: { children: ReactNode }) => {
       className="group py-2 dark:relative"
     >
       <motion.div
-        className="dark:pointer-events-none dark:absolute dark:-inset-px dark:rounded-xl dark:opacity-0 dark:transition dark:duration-300 dark:group-hover:opacity-100"
+        className="dark:-inset-px dark:rounded-xl dark:opacity-0 dark:transition dark:duration-300 dark:group-hover:opacity-100 md:dark:pointer-events-none md:dark:absolute"
         style={{
           background: useMotionTemplate`
             radial-gradient(
