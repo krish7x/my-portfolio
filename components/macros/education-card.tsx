@@ -12,11 +12,11 @@ export const EducationCard = ({
       <h2 className="text-xs font-semibold text-blue-800 dark:text-blue-500 md:text-sm">
         {yrsOfStudies}
       </h2>
-      <h2 className="dark:text-custom4 text-medium font-semibold text-cyan-950 md:text-lg">
+      <h2 className="text-medium font-semibold text-cyan-950 dark:text-custom4 md:text-lg">
         {designation}
       </h2>
     </div>
-    <p className="dark:text-custom3 text-sm font-medium leading-5 text-slate-600 md:leading-6">
+    <p className="text-sm font-medium leading-5 text-slate-600 dark:text-custom3 md:leading-6">
       {institueName}, Chennai, Tamil Nadu
     </p>
   </div>

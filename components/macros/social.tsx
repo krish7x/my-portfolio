@@ -46,7 +46,7 @@ export default function Social() {
           <Link
             href={"mailto:krishnakumar99g@gmail.com"}
             target="__blank"
-            className="dark:hover:text-custom4 inline-block text-sm font-medium leading-4 text-secondary no-underline transition-all duration-0.25s ease-custom-cubic vertical-rl hover:-translate-y-2 dark:text-custom2"
+            className="inline-block text-sm font-medium leading-4 text-secondary no-underline transition-all duration-0.25s ease-custom-cubic vertical-rl hover:-translate-y-2 dark:text-custom2 dark:hover:text-custom4"
           >
             krishnakumar99g@gmail.com
           </Link>

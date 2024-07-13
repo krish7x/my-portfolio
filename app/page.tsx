@@ -15,10 +15,10 @@ export default function Home() {
   return (
     <>
       {/* hero section */}
-      <h1 className="dark:text-custom4 text-lg text-slate-800 md:text-xl">
+      <h1 className="text-lg text-slate-800 dark:text-custom4 md:text-xl">
         Hi, I am Krishna Kumar 👋
       </h1>
-      <h2 className="dark:text-custom3 mt-2 text-medium leading-[calc(26px)] text-slate-600">
+      <h2 className="mt-2 text-medium leading-[calc(26px)] text-slate-600 dark:text-custom3">
         {LOREM_50}
       </h2>
 

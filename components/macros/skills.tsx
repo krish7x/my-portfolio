@@ -40,7 +40,7 @@ export default function Skills() {
                       alt={val.name}
                     />
                   )}
-                  <span className="dark:text-custom4 text-xs">{val.name}</span>
+                  <span className="text-xs dark:text-custom4">{val.name}</span>
                 </div>
               </Chip>
             ))}

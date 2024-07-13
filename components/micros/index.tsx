@@ -11,7 +11,7 @@ export const Heading = ({ text }: { text: string }) => {
           : "";
   return (
     <div>
-      <h1 className="dark:text-custom4 text-2xl font-semibold text-slate-800">
+      <h1 className="text-2xl font-semibold text-slate-800 dark:text-custom4">
         {text}
       </h1>
       <Divider className={`my-4 h-[calc(2px)] bg-custom2 ${dividerWidth}`} />
@@ -30,7 +30,7 @@ export const SubHeading = ({ text }: { text: string }) => {
           : "";
   return (
     <div>
-      <h1 className="dark:text-custom4 text-medium font-semibold text-slate-800">
+      <h1 className="text-medium font-semibold text-slate-800 dark:text-custom4">
         {text}
       </h1>
       <Divider className={`my-2 bg-custom2 ${dividerWidth}`} />

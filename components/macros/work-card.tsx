@@ -24,7 +24,7 @@ export const WorkCard = ({
         target="__blank"
         className="flex items-center gap-1"
       >
-        <h2 className="dark:text-custom4 flex items-center gap-1 text-medium font-semibold text-cyan-950 md:text-lg">
+        <h2 className="flex items-center gap-1 text-medium font-semibold text-cyan-950 dark:text-custom4 md:text-lg">
           {company}
         </h2>
         <LinkIcon />
@@ -33,7 +33,7 @@ export const WorkCard = ({
     <p className="text-xs font-medium text-green-700 dark:text-green-300 md:text-sm md:font-normal">
       📍{location}
     </p>
-    <p className="dark:text-custom3 text- leading-5 text-slate-600 md:text-sm md:leading-6">
+    <p className="text- leading-5 text-slate-600 dark:text-custom3 md:text-sm md:leading-6">
       {description}
     </p>
   </div>
