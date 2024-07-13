@@ -8,8 +8,8 @@ import "./globals.css";
 import { ThemeProvider } from "./providers";
 
 const inter = Inter({
-  subsets: ["latin"],
-  variable: "--font-inter", // Add a CSS variable to use in your styles
+  subsets: ["cyrillic"],
+  variable: "--font-inter",
   display: "swap",
 });
 

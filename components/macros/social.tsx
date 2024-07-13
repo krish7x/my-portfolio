@@ -24,7 +24,7 @@ export default function Social() {
                 key={"social-links-" + index}
                 href={"https://github.com/krish7x"}
                 target="__blank"
-                className="transform transition-all duration-0.25s ease-custom-cubic hover:-translate-y-2 hover:delay-200"
+                className="transform transition-all duration-0.25s ease-custom-cubic hover:-translate-y-2 hover:delay-100"
               >
                 <Icon
                   size={24}
@@ -46,7 +46,7 @@ export default function Social() {
           <Link
             href={"mailto:krishnakumar99g@gmail.com"}
             target="__blank"
-            className="inline-block text-sm leading-4 text-secondary no-underline transition-all duration-0.25s ease-custom-cubic vertical-rl hover:-translate-y-2 dark:text-custom2 dark:hover:text-white"
+            className="dark:hover:text-custom4 inline-block text-sm font-medium leading-4 text-secondary no-underline transition-all duration-0.25s ease-custom-cubic vertical-rl hover:-translate-y-2 dark:text-custom2"
           >
             krishnakumar99g@gmail.com
           </Link>

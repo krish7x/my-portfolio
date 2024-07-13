@@ -1,3 +1,5 @@
+import { RiNextjsFill } from "react-icons/ri";
+
 export const LOREM_50 =
   "Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius dolor reprehenderit est numquam at accusantium dolores neque temporibus fuga aperiam molestias quos, et, iure laborum natus! Ex explicabo dicta cupiditate minus aut, sequi facilis corrupti porro commodi inventore libero. Beatae veritatis minima saepe, sint inventore fugit vel quidem quia voluptatum.";
 export const LOREM_20 =
@@ -20,18 +22,21 @@ export const WORK_EXPERIENCE = [
     company: "Caratlane Trading Pvt Ltd",
     location: "Chennai, Tamil Nadu",
     description: LOREM_20,
+    link: "https://www.caratlane.com",
   },
   {
     yrsOfExp: "2021 - 2023",
     company: "Pickyourtrail",
     location: "Chennai, Tamil Nadu",
     description: LOREM_20,
+    link: "https://www.pickyourtrail.com",
   },
   {
     yrsOfExp: "2021",
     company: "Clayfin",
     location: "Chennai, Tamil Nadu",
     description: LOREM_20,
+    link: "https://www.clayfin.com/",
   },
 ];
 
@@ -61,19 +66,19 @@ export const SKILLS = [
     heading: "Languages",
     skills: [
       {
-        icon: "java.svg",
+        src: "java.svg",
         name: "Java",
       },
       {
-        icon: "js.svg",
+        src: "js.svg",
         name: "JavaScript",
       },
       {
-        icon: "ts.svg",
+        src: "ts.svg",
         name: "TypeScript",
       },
       {
-        icon: "ruby.svg",
+        src: "ruby.svg",
         name: "Ruby",
       },
     ],
@@ -82,35 +87,36 @@ export const SKILLS = [
     heading: "Frontend",
     skills: [
       {
-        icon: "react.svg",
+        src: "react.svg",
         name: "React",
       },
       {
-        icon: "next.svg",
+        src: "next.svg",
         name: "NextJS",
+        icon: RiNextjsFill,
       },
       {
-        icon: "react-native.svg",
+        src: "react-native.svg",
         name: "React Native",
       },
       {
-        icon: "tailwind.svg",
+        src: "tailwind.svg",
         name: "Tailwind CSS",
       },
       {
-        icon: "styled-components.svg",
+        src: "styled-components.svg",
         name: "Styled Components",
       },
       {
-        icon: "redux.svg",
+        src: "redux.svg",
         name: "Redux",
       },
       {
-        icon: "jotai.svg",
+        src: "jotai.svg",
         name: "Jotai",
       },
       {
-        icon: "react-query.svg",
+        src: "react-query.svg",
         name: "React Query",
       },
     ],
@@ -119,31 +125,31 @@ export const SKILLS = [
     heading: "Backend",
     skills: [
       {
-        icon: "spring-boot.svg",
+        src: "spring-boot.svg",
         name: "Spring Boot",
       },
       {
-        icon: "nodejs.svg",
+        src: "nodejs.svg",
         name: "NodeJs",
       },
       {
-        icon: "nestjs.svg",
+        src: "nestjs.svg",
         name: "NestJs",
       },
       {
-        icon: "ror.svg",
+        src: "ror.svg",
         name: "Ruby on Rails",
       },
       {
-        icon: "kafka.svg",
+        src: "kafka.svg",
         name: "Apache Kafka",
       },
       {
-        icon: "graphql.svg",
+        src: "graphql.svg",
         name: "GraphQL",
       },
       {
-        icon: "jest.svg",
+        src: "jest.svg",
         name: "Jest",
       },
     ],
@@ -152,15 +158,15 @@ export const SKILLS = [
     heading: "Databases",
     skills: [
       {
-        icon: "mysql.svg",
+        src: "mysql.svg",
         name: "MySQL",
       },
       {
-        icon: "mongo.svg",
+        src: "mongo.svg",
         name: "MongoDB",
       },
       {
-        icon: "postgres.svg",
+        src: "postgres.svg",
         name: "PostgresSQL",
       },
     ],
@@ -169,15 +175,15 @@ export const SKILLS = [
     heading: "DevOps",
     skills: [
       {
-        icon: "docker.svg",
+        src: "docker.svg",
         name: "Docker",
       },
       {
-        icon: "jenkins.svg",
+        src: "jenkins.svg",
         name: "Jenkins",
       },
       {
-        icon: "kubernetes.svg",
+        src: "kubernetes.svg",
         name: "Kubernetes",
       },
     ],

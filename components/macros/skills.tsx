@@ -27,13 +27,20 @@ export default function Skills() {
                 }}
               >
                 <div className="flex items-center justify-center gap-2">
-                  <Image
-                    src={val.icon}
-                    height={20}
-                    width={20}
-                    alt={val.name}
-                  />
-                  <span>{val.name}</span>
+                  {val?.icon ? (
+                    <val.icon
+                      size={20}
+                      //className="fill-secondary dark:fill-custom2 dark:hover:fill-white"
+                    />
+                  ) : (
+                    <Image
+                      src={val.src}
+                      height={20}
+                      width={20}
+                      alt={val.name}
+                    />
+                  )}
+                  <span className="dark:text-custom4 text-xs">{val.name}</span>
                 </div>
               </Chip>
             ))}

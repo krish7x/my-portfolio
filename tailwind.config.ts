@@ -22,15 +22,17 @@ module.exports = {
         "0.25s": "250ms",
       },
       colors: {
-        white: "#FFFFFF",
+        white: "#FFF",
         green: {
-          50: "#848d97",
+          50: "#848D97",
         },
         darkBlue: {
           50: "#1C172E",
         },
         custom1: "#322C2B",
-        custom2: "#00b7c7",
+        custom2: "#00B7C7",
+        custom3: "#94A3B8",
+        custom4: "#E7E9EA",
       },
     },
   },
