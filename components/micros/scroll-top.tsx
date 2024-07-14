@@ -38,7 +38,7 @@ export function ScrollTop() {
         isIconOnly
         aria-label="Scroll to top"
         onClick={scrollToTop}
-        className="bg-custom1 dark:bg-primary"
+        className="bg-primary"
       >
         <BiChevronUp
           size={24}
