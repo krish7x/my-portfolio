@@ -1,10 +1,18 @@
 "use client";
 
-import { motion, useMotionTemplate, useMotionValue } from "framer-motion";
-import { ReactNode } from "react";
+import {
+  motion,
+  useMotionTemplate,
+  useMotionValue,
+  useScroll,
+} from "framer-motion";
+import { usePathname } from "next/navigation";
+import { ReactNode, useMemo } from "react";
 import { MouseEvent } from "react";
 
 export const DefaultLayout = ({ children }: { children: ReactNode }) => {
+  const path = usePathname();
+  const { scrollYProgress } = useScroll();
   const mouseX = useMotionValue(0);
   const mouseY = useMotionValue(0);
 
@@ -13,11 +21,22 @@ export const DefaultLayout = ({ children }: { children: ReactNode }) => {
     mouseX.set(clientX - left);
     mouseY.set(clientY - top);
   }
+  const isPostPage = useMemo(() => {
+    const arr = path.split("/").filter(val => val);
+    return arr.length === 2 && arr[0] === "posts";
+  }, [path]);
+
   return (
     <div
       onMouseMove={handleMouseMove}
       className="group py-2 dark:relative"
     >
+      {isPostPage && (
+        <motion.div
+          className="fixed left-0 right-0 top-0 z-20 h-2 origin-[0%] bg-custom1 dark:bg-primary"
+          style={{ scaleX: scrollYProgress }}
+        />
+      )}
       <motion.div
         className="dark:-inset-px dark:rounded-xl dark:opacity-0 dark:transition dark:duration-300 dark:group-hover:opacity-100 md:dark:pointer-events-none md:dark:absolute"
         style={{

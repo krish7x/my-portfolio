@@ -30,7 +30,7 @@ export default function Header() {
         <div className="flex gap-2 align-middle">
           {pathname !== "/" && (
             <Avatar
-              src="/krish.png"
+              src="/avatar.jpg"
               onClick={() => router.push("/")}
             />
           )}
