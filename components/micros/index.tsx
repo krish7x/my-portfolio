@@ -43,5 +43,5 @@ export const WorkCardDivider = () => (
 );
 
 export const EducationCardDivider = () => (
-  <div className="absolute left-1/2 top-24 flex h-5/6 w-2 flex-1 bg-primary" />
+  <div className="absolute left-1/2 top-24 flex h-4/6 w-2 flex-1 bg-primary" />
 );

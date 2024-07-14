@@ -10,6 +10,7 @@ import {
   WorkCardDivider,
 } from "@/components/micros";
 import { EDUCATION, LOREM_50, WORK_EXPERIENCE } from "@/contants";
+import { motion } from "framer-motion";
 
 export default function Home() {
   return (
@@ -27,13 +28,30 @@ export default function Home() {
         {/* Work Experience */}
         <div className="flex flex-col gap-6">
           <Heading text="Work Experience 💼" />
+
           <div>
             {WORK_EXPERIENCE.map((val, inx, self) => (
               <div key={"work-experience-card-" + inx}>
-                <WorkCard {...val} />
-                {self.length > 1 && self.length - 1 !== inx && (
-                  <WorkCardDivider />
-                )}
+                <motion.div
+                  className="card"
+                  initial={{
+                    opacity: 0,
+                    x: inx % 2 !== 0 ? 50 : -50,
+                  }}
+                  whileInView={{
+                    opacity: 1,
+                    x: 0,
+                    transition: {
+                      duration: 1,
+                    },
+                  }}
+                  viewport={{ once: true }}
+                >
+                  <WorkCard {...val} />
+                  {self.length > 1 && self.length - 1 !== inx && (
+                    <WorkCardDivider />
+                  )}
+                </motion.div>
               </div>
             ))}
           </div>
@@ -43,16 +61,32 @@ export default function Home() {
         <div className="relative flex flex-col gap-6">
           <Heading text="Education 🎓" />
           <div className="flex flex-col gap-12">
-            <EducationCardDivider />
-            {EDUCATION.map((val, inx) => (
-              <div
+            {EDUCATION.map((val, inx, self) => (
+              <motion.div
                 key={"work-experience-card-" + inx}
-                className={`flex ${
-                  inx % 2 !== 0 ? "justify-end" : "justify-normal"
-                }`}
+                className="card"
+                initial={{
+                  opacity: 0,
+                  x: inx % 2 !== 0 ? 50 : -50,
+                }}
+                whileInView={{
+                  opacity: 1,
+                  x: 0,
+                  transition: {
+                    duration: 1,
+                  },
+                }}
+                viewport={{ once: true }}
               >
-                <EducationCard {...val} />
-              </div>
+                {self.length - 1 !== inx && <EducationCardDivider />}
+                <div
+                  className={`flex ${
+                    inx % 2 !== 0 ? "justify-end" : "justify-normal"
+                  }`}
+                >
+                  <EducationCard {...val} />
+                </div>
+              </motion.div>
             ))}
           </div>
         </div>
