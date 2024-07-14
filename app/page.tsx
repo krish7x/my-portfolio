@@ -16,10 +16,10 @@ export default function Home() {
   return (
     <>
       {/* hero section */}
-      <h1 className="dark:text-custom4 text-lg text-slate-800 md:text-xl">
+      <h1 className="text-lg text-slate-800 dark:text-custom4 md:text-xl">
         Hi, I am Krishna Kumar 👋
       </h1>
-      <h2 className="dark:text-custom3 mt-2 text-medium leading-[calc(26px)] text-slate-600">
+      <h2 className="mt-2 text-medium leading-[calc(26px)] text-slate-600 dark:text-custom3">
         {LOREM_50}
       </h2>
 
@@ -31,7 +31,10 @@ export default function Home() {
 
           <div>
             {WORK_EXPERIENCE.map((val, inx, self) => (
-              <div key={"work-experience-card-" + inx}>
+              <div
+                className="relative"
+                key={"work-experience-card-" + inx}
+              >
                 <motion.div
                   className="card"
                   initial={{
@@ -51,6 +54,11 @@ export default function Home() {
                   {self.length > 1 && self.length - 1 !== inx && (
                     <WorkCardDivider />
                   )}
+                  {inx !== 0 && (
+                    <p className="absolute -left-[calc(2px)] -top-12 font-semibold text-blue-600 vertical-lr dark:text-primary">
+                      {val.peroid}
+                    </p>
+                  )}
                 </motion.div>
               </div>
             ))}
@@ -58,7 +66,7 @@ export default function Home() {
         </div>
 
         {/* Education  */}
-        <div className="relative flex flex-col gap-6">
+        <div className="flex flex-col gap-6">
           <Heading text="Education 🎓" />
           <div className="flex flex-col gap-12">
             {EDUCATION.map((val, inx, self) => (
@@ -78,7 +86,7 @@ export default function Home() {
                 viewport={{ once: true }}
               >
                 <div
-                  className={`flex ${
+                  className={`relative flex ${
                     inx % 2 !== 0 ? "justify-end" : "justify-normal"
                   }`}
                 >
@@ -93,7 +101,7 @@ export default function Home() {
         </div>
 
         {/* Skills */}
-        <div className="relative flex flex-col">
+        <div className="flex flex-col">
           <Heading text="Skills 🚀" />
           <Skills />
         </div>

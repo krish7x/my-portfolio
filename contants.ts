@@ -30,6 +30,7 @@ export const WORK_EXPERIENCE = [
     location: "Chennai, Tamil Nadu",
     description: LOREM_20,
     link: "https://www.pickyourtrail.com",
+    peroid: "2 yrs",
   },
   {
     yrsOfExp: "2021",
@@ -37,6 +38,7 @@ export const WORK_EXPERIENCE = [
     location: "Chennai, Tamil Nadu",
     description: LOREM_20,
     link: "https://www.clayfin.com/",
+    peroid: "6 mo",
   },
 ];
 

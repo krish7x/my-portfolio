@@ -39,7 +39,7 @@ export const DefaultLayout = ({ children }: { children: ReactNode }) => {
     >
       {isPostPage && (
         <motion.div
-          className="fixed left-0 right-0 top-0 z-20 h-2 origin-[0%] bg-primary"
+          className="fixed left-0 right-0 top-0 z-20 h-2 origin-[0%] bg-blue-500"
           style={{ scaleX }}
         />
       )}
