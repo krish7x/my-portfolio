@@ -6,7 +6,7 @@ import { SubHeading } from "../micros";
 
 export default function Skills() {
   return (
-    <div className="mt-6 flex flex-col gap-8">
+    <div className="pt-6 flex flex-col gap-8 px-2 pb-2">
       {SKILLS.map(({ heading, skills }, inx) => (
         <div
           key={"skill-" + inx}
