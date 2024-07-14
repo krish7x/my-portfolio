@@ -24,7 +24,7 @@ export default function Home() {
       </h2>
 
       {/* body section */}
-      <div className="mt-8 flex flex-col gap-12">
+      <div className="mt-8 flex max-w-full flex-col gap-12 overflow-x-hidden">
         {/* Work Experience */}
         <div className="flex flex-col gap-6">
           <Heading text="Work Experience 💼" />
@@ -64,7 +64,6 @@ export default function Home() {
             {EDUCATION.map((val, inx, self) => (
               <motion.div
                 key={"work-experience-card-" + inx}
-                className="card"
                 initial={{
                   opacity: 0,
                   x: inx % 2 !== 0 ? 50 : -50,
