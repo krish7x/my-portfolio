@@ -11,7 +11,7 @@ export const Heading = ({ text }: { text: string }) => {
           : "";
   return (
     <div>
-      <h1 className="text-2xl font-semibold text-slate-800 dark:text-custom4">
+      <h1 className="dark:text-custom4 text-2xl font-semibold text-slate-800">
         {text}
       </h1>
       <Divider className={`my-4 h-[calc(2px)] bg-custom2 ${dividerWidth}`} />
@@ -30,7 +30,7 @@ export const SubHeading = ({ text }: { text: string }) => {
           : "";
   return (
     <div>
-      <h1 className="text-medium font-semibold text-slate-800 dark:text-custom4">
+      <h1 className="dark:text-custom4 text-medium font-semibold text-slate-800">
         {text}
       </h1>
       <Divider className={`my-2 bg-custom2 ${dividerWidth}`} />
@@ -43,5 +43,5 @@ export const WorkCardDivider = () => (
 );
 
 export const EducationCardDivider = () => (
-  <div className="absolute left-1/2 top-24 flex h-4/6 w-2 flex-1 bg-primary" />
+  <div className="absolute left-1/2 top-24 flex h-[calc(75%)] w-2 flex-1 bg-primary" />
 );

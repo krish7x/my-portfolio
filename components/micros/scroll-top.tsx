@@ -32,7 +32,7 @@ export function ScrollTop() {
   }
 
   return (
-    <div className="fixed bottom-5 right-5 z-10 md:right-40">
+    <div className="fixed bottom-5 right-5 z-30 md:right-40">
       <Button
         size="lg"
         isIconOnly
