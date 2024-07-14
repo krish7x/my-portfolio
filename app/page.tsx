@@ -55,7 +55,7 @@ export default function Home() {
                     <WorkCardDivider />
                   )}
                   {inx !== 0 && (
-                    <p className="absolute -left-[calc(2px)] -top-12 font-semibold text-blue-600 vertical-lr dark:text-primary">
+                    <p className="absolute -left-[calc(2px)] -top-12 text-slate-600 vertical-lr dark:font-medium dark:text-custom3">
                       {val.peroid}
                     </p>
                   )}
