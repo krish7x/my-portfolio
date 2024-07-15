@@ -41,7 +41,6 @@ export default function Home() {
                 key={"work-experience-card-" + inx}
               >
                 <motion.div
-                  className="card"
                   initial={{
                     opacity: 0,
                     x: inx % 2 !== 0 ? 50 : -50,

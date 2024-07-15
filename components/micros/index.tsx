@@ -1,4 +1,5 @@
 import { Divider } from "@nextui-org/react";
+import { motion } from "framer-motion";
 
 export const Heading = ({ text }: { text: string }) => {
   const dividerWidth =
@@ -10,12 +11,25 @@ export const Heading = ({ text }: { text: string }) => {
           ? "w-20"
           : "";
   return (
-    <div>
+    <motion.div
+      initial={{
+        opacity: 0,
+        x: -50,
+      }}
+      whileInView={{
+        opacity: 1,
+        x: 0,
+        transition: {
+          duration: 1,
+        },
+      }}
+      viewport={{ once: true }}
+    >
       <h1 className="text-2xl font-semibold text-slate-800 dark:text-custom4">
         {text}
       </h1>
-      <Divider className={`my-4 h-[calc(2px)] bg-custom2 ${dividerWidth}`} />
-    </div>
+      <Divider className={`h-[calc(2px)] ${dividerWidth} my-4 bg-custom2`} />
+    </motion.div>
   );
 };
 
@@ -29,12 +43,25 @@ export const SubHeading = ({ text }: { text: string }) => {
           ? "w-20"
           : "";
   return (
-    <div>
+    <motion.div
+      initial={{
+        opacity: 0,
+        x: 50,
+      }}
+      whileInView={{
+        opacity: 1,
+        x: 0,
+        transition: {
+          duration: 1,
+        },
+      }}
+      viewport={{ once: true }}
+    >
       <h1 className="text-medium font-semibold text-slate-800 dark:text-custom4">
         {text}
       </h1>
       <Divider className={`my-2 bg-custom2 ${dividerWidth}`} />
-    </div>
+    </motion.div>
   );
 };
 

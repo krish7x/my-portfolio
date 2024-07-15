@@ -62,8 +62,7 @@ const WavyText: FC<Props> = ({
         <motion.span
           key={index}
           variants={child}
-          className="flex gap-1
-          "
+          className="flex gap-1"
         >
           {letter === " " ? "\u00A0" : letter}
           {self.length - 1 === index && waveAnimation ? (
