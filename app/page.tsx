@@ -1,5 +1,6 @@
 "use client";
 
+import WavyText from "@/components/animations/wavy-text";
 import { EducationCard } from "@/components/macros/education-card";
 import Skills from "@/components/macros/skills";
 import Social from "@/components/macros/social";
@@ -16,9 +17,13 @@ export default function Home() {
   return (
     <>
       {/* hero section */}
-      <h1 className="text-lg text-slate-800 dark:text-custom4 md:text-xl">
-        Hi, I am Krishna Kumar 👋
-      </h1>
+      <WavyText
+        text="Hi, I am Krishna Kumar"
+        replay={true}
+        className="text-lg font-medium text-slate-800 dark:text-custom4 md:text-xl"
+        waveAnimation
+      />
+
       <h2 className="mt-2 text-medium leading-[calc(26px)] text-slate-600 dark:text-custom3">
         {LOREM_50}
       </h2>
