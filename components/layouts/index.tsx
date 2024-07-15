@@ -35,7 +35,7 @@ export const DefaultLayout = ({ children }: { children: ReactNode }) => {
   return (
     <div
       onMouseMove={handleMouseMove}
-      className="group py-2 dark:relative"
+      className="group scroll-smooth py-2 dark:relative"
     >
       {isPostPage && (
         <motion.div
