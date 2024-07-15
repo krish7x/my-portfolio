@@ -1,4 +1,5 @@
 import { nextui } from "@nextui-org/react";
+import plugin from "tailwindcss/plugin";
 import { PluginAPI } from "tailwindcss/types/config";
 
 /** @type {import('tailwindcss').Config} */
@@ -69,6 +70,22 @@ module.exports = {
       };
       addUtilities(newUtilities);
     },
+    plugin(function ({ addUtilities }) {
+      addUtilities({
+        ".scrollbar-hide": {
+          /* IE and Edge */
+          "-ms-overflow-style": "none",
+
+          /* Firefox */
+          "scrollbar-width": "none",
+
+          /* Safari and Chrome */
+          "&::-webkit-scrollbar": {
+            display: "none",
+          },
+        },
+      });
+    }),
     nextui(),
     require("@tailwindcss/typography"),
   ],

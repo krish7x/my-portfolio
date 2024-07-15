@@ -29,7 +29,7 @@ export default function Home() {
       </h2>
 
       {/* body section */}
-      <div className="mt-8 flex max-w-full flex-col gap-12 overflow-x-hidden">
+      <div className="mt-8 flex max-w-full flex-col gap-12 overflow-hidden scrollbar-hide">
         {/* Work Experience */}
         <div className="flex flex-col gap-6">
           <Heading text="Work Experience 💼" />
