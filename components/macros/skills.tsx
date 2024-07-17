@@ -11,7 +11,7 @@ export default function Skills() {
       {SKILLS.map(({ heading, skills }, inx) => (
         <div
           key={"skill-" + inx}
-          className="flex w-full flex-col gap-4"
+          className="flex w-full flex-col gap-8"
         >
           <SubHeading text={heading} />
           <div className="flex flex-wrap gap-x-4 gap-y-5">

@@ -31,7 +31,7 @@ export default function Home() {
       {/* body section */}
       <div className="mt-8 flex max-w-full flex-col gap-12 overflow-hidden scrollbar-hide">
         {/* Work Experience */}
-        <div className="flex flex-col gap-6">
+        <div className="flex flex-col gap-8">
           <Heading text="Work Experience 💼" />
 
           <div>
@@ -70,7 +70,7 @@ export default function Home() {
         </div>
 
         {/* Education  */}
-        <div className="flex flex-col gap-6">
+        <div className="flex flex-col gap-8">
           <Heading text="Education 🎓" />
           <div className="flex flex-col gap-12">
             {EDUCATION.map((val, inx, self) => (
@@ -105,7 +105,7 @@ export default function Home() {
         </div>
 
         {/* Skills */}
-        <div className="flex flex-col">
+        <div className="flex flex-col gap-6">
           <Heading text="Skills 🚀" />
           <Skills />
         </div>

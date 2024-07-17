@@ -22,6 +22,14 @@ module.exports = {
       transitionDuration: {
         "0.25s": "250ms",
       },
+      spacing: {
+        "1rem": "1rem",
+        "7px": "7px",
+        "10px": "10px",
+      },
+      borderRadius: {
+        "30%": "30%",
+      },
       colors: {
         white: "#FFF",
         green: {
@@ -34,6 +42,7 @@ module.exports = {
         custom2: "#00B7C7",
         custom3: "#94A3B8",
         custom4: "#E7E9EA",
+        custom5: "#cb1829",
       },
       keyframes: {
         wave: {
@@ -49,6 +58,9 @@ module.exports = {
       },
       animation: {
         wave: "wave 1.5s infinite",
+      },
+      heading: {
+        position: "relative",
       },
     },
   },
@@ -86,6 +98,38 @@ module.exports = {
         },
       });
     }),
+    function ({ addUtilities }: PluginAPI) {
+      addUtilities({
+        ".underlined": {
+          position: "relative",
+          display: "inline-block",
+        },
+        ".underlined::after": {
+          content: '""',
+          position: "absolute",
+          bottom: "-10px",
+          left: "0",
+          height: "7px",
+          width: "100%",
+          borderBottom: "2px solid #cb1829",
+          borderRadius: "30%",
+        },
+        ".subunderlined": {
+          position: "relative",
+          display: "inline-block",
+        },
+        ".subunderlined::after": {
+          content: '""',
+          position: "absolute",
+          bottom: "-10px",
+          left: "0",
+          height: "7px",
+          width: "100%",
+          borderBottom: "2px solid #00B7C7",
+          borderRadius: "30%",
+        },
+      });
+    },
     nextui(),
     require("@tailwindcss/typography"),
   ],
