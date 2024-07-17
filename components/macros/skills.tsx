@@ -26,7 +26,7 @@ export default function Skills() {
                   opacity: 1,
                   y: 0,
                   transition: {
-                    type: "spring",
+                    type: "tween",
                     opacity: { ease: "linear" },
                     duration: 0.5,
                     stiffness: 50,
