@@ -8,7 +8,7 @@ import "./globals.css";
 import { ThemeProvider } from "./providers";
 
 const inter = Inter({
-  subsets: ["cyrillic"],
+  subsets: ["latin", "greek"],
   variable: "--font-inter",
   display: "swap",
 });

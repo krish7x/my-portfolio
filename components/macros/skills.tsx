@@ -26,10 +26,7 @@ export default function Skills() {
                   opacity: 1,
                   y: 0,
                   transition: {
-                    type: "tween",
-                    opacity: { ease: "linear" },
                     duration: 0.5,
-                    stiffness: 50,
                   },
                 }}
                 viewport={{ once: true }}
