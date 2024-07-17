@@ -30,7 +30,7 @@ export const WorkCard = ({
         </h2>
         <LinkIcon />
       </Link>
-      <p className="dark:text-custom7 font-semibold text-blue-400">{role}</p>
+      <p className="font-semibold text-blue-400 dark:text-custom7">{role}</p>
     </div>
     <p className="text-xs font-semibold text-green-700 dark:text-green-300 md:text-sm md:font-normal">
       📍{location}
