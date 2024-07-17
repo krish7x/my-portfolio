@@ -37,6 +37,7 @@ const WavyText: FC<Props> = ({
         type: "spring",
         damping: 12,
         stiffness: 200,
+        duration: 0.5,
       },
     },
     hidden: {

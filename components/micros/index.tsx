@@ -11,7 +11,7 @@ export const Heading = ({ text }: { text: string }) => {
         opacity: 1,
         x: 0,
         transition: {
-          duration: 1,
+          duration: 0.5,
         },
       }}
       viewport={{ once: true }}
@@ -34,7 +34,7 @@ export const SubHeading = ({ text }: { text: string }) => {
         opacity: 1,
         x: 0,
         transition: {
-          duration: 1,
+          duration: 0.5,
         },
       }}
       viewport={{ once: true }}

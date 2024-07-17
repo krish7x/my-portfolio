@@ -28,6 +28,8 @@ export default function Skills() {
                   transition: {
                     type: "spring",
                     opacity: { ease: "linear" },
+                    duration: 0.5,
+                    stiffness: 50,
                   },
                 }}
                 viewport={{ once: true }}

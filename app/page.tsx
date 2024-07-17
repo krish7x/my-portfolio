@@ -65,7 +65,7 @@ export default function Home() {
                     opacity: 1,
                     x: 0,
                     transition: {
-                      duration: 1,
+                      duration: 0.5,
                     },
                   }}
                   viewport={{ once: true }}
@@ -100,7 +100,7 @@ export default function Home() {
                   opacity: 1,
                   x: 0,
                   transition: {
-                    duration: 1,
+                    duration: 0.5,
                   },
                 }}
                 viewport={{ once: true }}
