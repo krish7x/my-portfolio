@@ -31,18 +31,12 @@ module.exports = {
         "30%": "30%",
       },
       colors: {
-        white: "#FFF",
-        green: {
-          50: "#848D97",
-        },
-        darkBlue: {
-          50: "#1C172E",
-        },
         custom1: "#322C2B",
         custom2: "#00B7C7",
         custom3: "#94A3B8",
         custom4: "#E7E9EA",
         custom5: "#cb1829",
+        custom6: "#848D97",
       },
       keyframes: {
         wave: {
@@ -59,9 +53,6 @@ module.exports = {
       animation: {
         wave: "wave 1.5s infinite",
       },
-      heading: {
-        position: "relative",
-      },
     },
   },
   plugins: [
@@ -72,12 +63,6 @@ module.exports = {
         },
         ".vertical-lr": {
           writingMode: "vertical-lr",
-        },
-        ".vertical-ttb": {
-          writingMode: "vertical-tb",
-        },
-        ".vertical-btt": {
-          writingMode: "vertical-bt",
         },
       };
       addUtilities(newUtilities);
