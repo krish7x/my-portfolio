@@ -17,7 +17,7 @@ export const metadata = {
   title: "Krishna Kumar",
   description: "Welcome to Krishnakumar's portfolio",
   keywords:
-    "software engineer, portfolio, software developer, frontend developer",
+    "software engineer, portfolio, software developer, frontend developer krish7x Krishnakumar,Krishnakumar ganesh",
 };
 
 interface RootLayoutProps {
