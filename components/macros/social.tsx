@@ -11,38 +11,29 @@ import {
 export default function Social() {
   return (
     <>
-      {/* desktop */}
       {/* left */}
-      <div className="bottom-0 left-0 right-auto max-sm:right-0 md:fixed md:left-16">
+      <div className="fixed bottom-0 left-16 right-auto max-sm:hidden">
         <Divider
           orientation="vertical"
-          className="absolute bottom-0 left-3 h-24 bg-blue-600 dark:bg-custom2 max-sm:hidden"
+          className="absolute bottom-0 left-3 h-24 bg-blue-600 dark:bg-custom2"
         />
-        <div className="flex flex-col gap-6 max-sm:pl-12">
-          <div className="flex gap-5 md:mb-28 md:flex-col">
-            {[FaGithub, FaLinkedin, FaInstagram, FaFacebook, FaTwitter].map(
-              (Icon, index) => (
-                <Link
-                  key={"social-links-" + index}
-                  href={"https://github.com/krish7x"}
-                  target="__blank"
-                  className="transform transition-all duration-0.25s ease-custom-cubic hover:-translate-y-2 hover:delay-100"
-                  aria-label={"social-links-" + index}
-                >
-                  <Icon
-                    size={24}
-                    className="fill-blue-600 dark:fill-custom2 dark:hover:fill-white"
-                  />
-                </Link>
-              ),
-            )}
-          </div>
-          <h2 className="pl-4 text-medium md:hidden">
-            Made with ❤️ by{" "}
-            <span className="font-semibold text-blue-600 dark:text-custom4">
-              Krish
-            </span>
-          </h2>
+        <div className="mb-28 flex flex-col gap-5">
+          {[FaGithub, FaLinkedin, FaInstagram, FaFacebook, FaTwitter].map(
+            (Icon, index) => (
+              <Link
+                key={"social-links-" + index}
+                href={"https://github.com/krish7x"}
+                target="__blank"
+                className="transform transition-all duration-0.25s ease-custom-cubic hover:-translate-y-2 hover:delay-100"
+                aria-label={"social-links-" + index}
+              >
+                <Icon
+                  size={24}
+                  className="fill-blue-600 dark:fill-custom2 dark:hover:fill-white"
+                />
+              </Link>
+            ),
+          )}
         </div>
       </div>
 
@@ -62,8 +53,6 @@ export default function Social() {
           </Link>
         </div>
       </div>
-
-      {/* mobile */}
     </>
   );
 }

@@ -10,7 +10,7 @@ import {
   Heading,
   WorkCardDivider,
 } from "@/components/micros";
-import { EDUCATION, LOREM_50, WORK_EXPERIENCE } from "@/contants";
+import { EDUCATION, WORK_EXPERIENCE } from "@/contants";
 import { motion } from "framer-motion";
 
 export default function Home() {
@@ -24,8 +24,24 @@ export default function Home() {
         waveAnimation
       />
 
-      <h2 className="mt-2 text-medium leading-[calc(26px)] text-slate-600 dark:text-custom3">
-        {LOREM_50}
+      <h2 className="mt-4 text-medium leading-[calc(26px)] text-slate-600 dark:text-custom3">
+        A caffeine-powered{" "}
+        <span className="font-medium text-slate-800 dark:text-custom4">
+          software engineer
+        </span>{" "}
+        with{" "}
+        <span className="font-medium text-slate-800 dark:text-custom4">
+          3.5 years
+        </span>{" "}
+        of experience working in product companies across{" "}
+        <span className="font-medium text-slate-800 dark:text-custom4">
+          banking, travel, and e-commerce
+        </span>{" "}
+        domains. I love solving real-world problems with clean, simple and
+        optimized solution. When I'm not coding, you’ll catch me sipping coffee,
+        binge-watching{" "}
+        <span className="font-medium italic">Mr. Robot or Silicon Valley</span>,
+        and dreaming up the next big thing.
       </h2>
 
       {/* body section */}

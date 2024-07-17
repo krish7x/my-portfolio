@@ -5,14 +5,15 @@ export const WorkCard = ({
   yrsOfExp,
   company,
   location,
-  description,
+
   link,
+  role,
 }: {
   yrsOfExp: string;
   company: string;
   location: string;
-  description: string;
   link: string;
+  role: string;
 }) => (
   <div className="relative flex w-full flex-col gap-2 rounded-xl border bg-white p-4 shadow-xl dark:border-white/10 dark:bg-gray-900 dark:shadow-2xl md:w-10/12 md:p-6">
     <div className="flex flex-col gap-1">
@@ -29,12 +30,10 @@ export const WorkCard = ({
         </h2>
         <LinkIcon />
       </Link>
+      <p className="dark:text-custom7 font-semibold text-blue-400">{role}</p>
     </div>
-    <p className="text-xs font-medium text-green-700 dark:text-green-300 md:text-sm md:font-normal">
+    <p className="text-xs font-semibold text-green-700 dark:text-green-300 md:text-sm md:font-normal">
       📍{location}
-    </p>
-    <p className="text- leading-5 text-slate-600 dark:text-custom3 md:text-sm md:leading-6">
-      {description}
     </p>
   </div>
 );

@@ -37,6 +37,7 @@ module.exports = {
         custom4: "#E7E9EA",
         custom5: "#cb1829",
         custom6: "#848D97",
+        custom7: "#90CAF9",
       },
       keyframes: {
         wave: {
@@ -96,7 +97,7 @@ module.exports = {
           left: "0",
           height: "7px",
           width: "100%",
-          borderBottom: "2px solid #cb1829",
+          borderBottom: "2px solid #2563eb",
           borderRadius: "30%",
         },
         ".subunderlined": {
