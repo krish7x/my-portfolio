@@ -16,7 +16,7 @@ export const Heading = ({ text }: { text: string }) => {
       }}
       viewport={{ once: true }}
     >
-      <h1 className="underlined relative text-2xl font-semibold text-slate-800 dark:text-custom4">
+      <h1 className="relative text-2xl font-semibold text-slate-800 underlined dark:text-custom4">
         {text}
       </h1>
     </motion.div>
@@ -39,7 +39,7 @@ export const SubHeading = ({ text }: { text: string }) => {
       }}
       viewport={{ once: true }}
     >
-      <h1 className="subunderlined text-medium font-semibold text-slate-800 dark:text-custom4">
+      <h1 className="text-medium font-semibold text-slate-800 subunderlined dark:text-custom4">
         {text}
       </h1>
     </motion.div>
