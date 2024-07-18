@@ -19,7 +19,7 @@ export const PostCard = ({
       <h2 className="line-clamp-2 text-sm font-semibold text-cyan-950 dark:text-slate-100 md:text-lg">
         {title}
       </h2>
-      <p className="dark:text-custom-6 text-xs leading-5 text-slate-600 md:text-sm md:leading-6">
+      <p className="text-xs leading-5 text-slate-600 dark:text-custom3 md:text-sm md:leading-6">
         {pubslishedData?.split(" ")[0]} . {readDuration}
       </p>
     </div>

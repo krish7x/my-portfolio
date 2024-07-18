@@ -29,7 +29,7 @@ export default function Footer() {
       <p className="text-sm text-slate-600 dark:text-custom3 md:text-base">
         Made with ❤️ by{" "}
         <span
-          className={`font-pacifico dark:text-custom4> font-semibold text-custom1 dark:text-custom4 ${pacifico.className}`}
+          className={`font-pacifico text-medium font-semibold text-custom1 dark:text-custom4 md:text-lg ${pacifico.className}`}
         >
           Krish
         </span>
