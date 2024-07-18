@@ -35,10 +35,7 @@ module.exports = {
         custom2: "#00B7C7",
         custom3: "rgba(203, 203, 232, .75)",
         custom4: "#E7E9EA",
-        custom5: "#cb1829",
-        custom6: "#848D97",
-        custom7: "#90CAF9",
-        custom8: "rgb(104, 112, 118)",
+        custom5: "#E5E5F9",
       },
       keyframes: {
         wave: {
