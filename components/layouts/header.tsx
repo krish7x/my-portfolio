@@ -9,15 +9,14 @@ import { ROUTES } from "../../contants";
 import { ModeToggle } from "../micros/mode-toggle";
 
 export default function Header() {
-  const [path, setPath] = useState("/");
-  const [hideTabs, setHideTabs] = useState(false);
   const pathname = usePathname();
   const router = useRouter();
+  const [hideTabs, setHideTabs] = useState(false);
+  const [path, setPath] = useState(pathname);
 
   useEffect(() => {
     const pathArr = pathname.split("/");
     if (pathArr.length < 3) {
-      setPath(pathname);
       setHideTabs(false);
     } else {
       setHideTabs(true);
@@ -45,6 +44,9 @@ export default function Header() {
                 router.push(`${id}`);
               }}
               selectedKey={path}
+              classNames={{
+                tabContent: "text-slate-600 dark:text-custom3",
+              }}
             >
               {ROUTES.map(({ text, path }) => (
                 <Tab
