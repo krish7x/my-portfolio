@@ -20,21 +20,21 @@ export default function Home() {
       <WavyText
         text="Hi, I am Krishna Kumar"
         replay={true}
-        className="text-lg font-medium text-slate-800 dark:text-custom4 md:text-xl"
+        className="text-lg font-semibold text-custom1 dark:text-custom4 md:text-xl"
         waveAnimation
       />
 
-      <h2 className="mt-4 text-medium leading-[calc(26px)] text-slate-600 dark:text-custom3">
+      <h2 className="mt-4 text-medium leading-7 text-slate-600 dark:text-custom3">
         A caffeine-powered{" "}
-        <span className="font-medium text-slate-800 dark:text-custom4">
+        <span className="font-semibold text-custom1 dark:text-custom4">
           software engineer
         </span>{" "}
         with{" "}
-        <span className="font-medium text-slate-800 dark:text-custom4">
+        <span className="font-semibold text-custom1 dark:text-custom4">
           3.5 years
         </span>{" "}
         of experience working in product companies across{" "}
-        <span className="font-medium text-slate-800 dark:text-custom4">
+        <span className="font-semibold text-custom1 dark:text-custom4">
           banking, travel, and e-commerce
         </span>{" "}
         domains. I love solving real-world problems with clean, simple and

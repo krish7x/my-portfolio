@@ -1,3 +1,10 @@
+import {
+  FaFacebook,
+  FaGithub,
+  FaInstagram,
+  FaLinkedin,
+  FaTwitter,
+} from "react-icons/fa";
 import { RiNextjsFill } from "react-icons/ri";
 
 export const LOREM_50 =
@@ -189,5 +196,28 @@ export const SKILLS = [
         name: "Kubernetes",
       },
     ],
+  },
+];
+
+export const SOCIAL = [
+  {
+    Icon: FaGithub,
+    link: "https://github.com/krish7x",
+  },
+  {
+    Icon: FaLinkedin,
+    link: "https://linkedin.com/in/krish7x",
+  },
+  {
+    Icon: FaInstagram,
+    link: "https://instagram.com/krish7x",
+  },
+  {
+    Icon: FaFacebook,
+    link: "https://facebook.com/krish7x",
+  },
+  {
+    Icon: FaTwitter,
+    link: "https://x.com/_krish7x",
   },
 ];

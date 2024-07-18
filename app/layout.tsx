@@ -1,17 +1,12 @@
 import { DefaultLayout } from "@/components/layouts";
+import Footer from "@/components/layouts/footer";
 import Header from "@/components/layouts/header";
 import { ScrollTop } from "@/components/micros/scroll-top";
-import { Inter } from "next/font/google";
 
 import { Analytics } from "./analytics";
+import { inter } from "./fonts";
 import "./globals.css";
 import { ThemeProvider } from "./providers";
-
-const inter = Inter({
-  subsets: ["latin", "greek"],
-  variable: "--font-inter",
-  display: "swap",
-});
 
 export const metadata = {
   title: "Krishna Kumar",
@@ -39,11 +34,12 @@ export default function RootLayout({ children }: RootLayoutProps) {
         className={`bg-white text-slate-900 antialiased dark:bg-slate-900 dark:text-slate-50 ${inter.className}`}
       >
         <ThemeProvider>
-          <div className="mdpy-10 mx-auto max-w-2xl px-4 py-6">
+          <div className="mdpy-10 mx-auto max-w-2xl px-4 pt-6">
             <DefaultLayout>
               <Header />
               <main>{children}</main>
             </DefaultLayout>
+            <Footer />
             <Analytics />
           </div>
           <ScrollTop />

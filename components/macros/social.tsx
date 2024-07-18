@@ -1,12 +1,6 @@
+import { SOCIAL } from "@/contants";
 import { Divider } from "@nextui-org/react";
 import Link from "next/link";
-import {
-  FaFacebook,
-  FaGithub,
-  FaInstagram,
-  FaLinkedin,
-  FaTwitter,
-} from "react-icons/fa";
 
 export default function Social() {
   return (
@@ -18,22 +12,20 @@ export default function Social() {
           className="absolute bottom-0 left-3 h-24 bg-blue-600 dark:bg-custom2"
         />
         <div className="mb-28 flex flex-col gap-5">
-          {[FaGithub, FaLinkedin, FaInstagram, FaFacebook, FaTwitter].map(
-            (Icon, index) => (
-              <Link
-                key={"social-links-" + index}
-                href={"https://github.com/krish7x"}
-                target="__blank"
-                className="transform transition-all duration-0.25s ease-custom-cubic hover:-translate-y-2 hover:delay-100"
-                aria-label={"social-links-" + index}
-              >
-                <Icon
-                  size={24}
-                  className="fill-blue-600 dark:fill-custom2 dark:hover:fill-white"
-                />
-              </Link>
-            ),
-          )}
+          {SOCIAL.map(({ Icon, link }, index) => (
+            <Link
+              key={"social-links-" + index}
+              href={link}
+              target="__blank"
+              className="transform transition-all duration-0.25s ease-custom-cubic hover:-translate-y-2 hover:delay-100"
+              aria-label={"social-links-" + index}
+            >
+              <Icon
+                size={24}
+                className="fill-blue-600 dark:fill-custom2 dark:hover:fill-white"
+              />
+            </Link>
+          ))}
         </div>
       </div>
 
