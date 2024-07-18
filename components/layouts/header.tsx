@@ -17,6 +17,7 @@ export default function Header() {
   useEffect(() => {
     const pathArr = pathname.split("/");
     if (pathArr.length < 3) {
+      setPath(pathname);
       setHideTabs(false);
     } else {
       setHideTabs(true);

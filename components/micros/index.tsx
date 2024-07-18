@@ -47,7 +47,7 @@ export const SubHeading = ({ text }: { text: string }) => {
 };
 
 export const WorkCardDivider = () => (
-  <div className="ml-5 h-16 w-2 bg-blue-600 dark:bg-primary" />
+  <div className="ml-5 h-14 w-2 bg-blue-600 dark:bg-primary" />
 );
 
 export const EducationCardDivider = () => (
