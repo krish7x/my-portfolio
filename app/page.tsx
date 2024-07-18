@@ -24,7 +24,7 @@ export default function Home() {
         waveAnimation
       />
 
-      <h2 className="mt-4 text-medium leading-7 text-slate-600 dark:text-custom3">
+      <h2 className="mt-4 text-medium leading-[calc(26px)] text-slate-600 dark:text-custom3">
         A caffeine-powered{" "}
         <span className="font-semibold text-custom1 dark:text-custom4">
           software engineer
