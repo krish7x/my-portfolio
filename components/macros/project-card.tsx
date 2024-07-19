@@ -22,6 +22,8 @@ export const ProjectCard = ({
   return (
     <div className="dark:lg:-hover:shadow-[inset_0_1px_0_0_rgba(148,163,184,0.1)] group/item flex w-full gap-6 rounded-xl bg-white py-4 transition dark:border-white/10 dark:bg-slate-900 max-sm:flex-col md:border md:p-6 md:light:shadow-xl lg:hover:border-blue-500 lg:hover:bg-custom7 lg:hover:drop-shadow-lg dark:lg:hover:border-primary dark:lg:hover:bg-gray-900">
       <Image
+        width={112}
+        height={64}
         alt="survey application"
         className="h-16 w-28 rounded-md border transition-all max-sm:h-full max-sm:w-1/2 md:group-hover/item:scale-110 md:group-hover/item:border-blue-300 dark:md:group-hover/item:border-inherit"
         src={src}
