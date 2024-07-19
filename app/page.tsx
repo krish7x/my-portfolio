@@ -11,7 +11,7 @@ import {
   Heading,
   WorkCardDivider,
 } from "@/components/micros";
-import { EDUCATION, WORK_EXPERIENCE } from "@/contants";
+import { EDUCATION, PROJECTS, WORK_EXPERIENCE } from "@/contants";
 import { motion } from "framer-motion";
 
 export default function Home() {
@@ -126,9 +126,12 @@ export default function Home() {
         {/* Projects */}
         <div className="flex flex-col gap-6">
           <Heading text="Projects 📋" />
-          <ProjectCard />
-          <ProjectCard />
-          <ProjectCard />
+          {PROJECTS.map((val, inx) => (
+            <ProjectCard
+              {...val}
+              key={"project-" + inx}
+            />
+          ))}
         </div>
 
         {/* Skills */}

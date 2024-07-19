@@ -5,7 +5,6 @@ export const WorkCard = ({
   yrsOfExp,
   company,
   location,
-
   link,
   role,
 }: {
@@ -33,7 +32,7 @@ export const WorkCard = ({
               width={24}
               height={16}
               opacity={0.7}
-              className="ml-1 inline-block h-4 w-4 shrink-0 translate-y-px transition-transform group-hover/link:-translate-y-1 group-hover/link:translate-x-1 group-focus-visible/link:-translate-y-1 group-focus-visible/link:translate-x-1 motion-reduce:transition-none"
+              className="ml-1 inline-block h-4 w-4 shrink-0 translate-y-px transition-transform group-focus-visible/link:-translate-y-1 group-focus-visible/link:translate-x-1 motion-reduce:transition-none md:group-hover/link:-translate-y-1 md:group-hover/link:translate-x-1"
             />
           </span>
         </h2>

@@ -1,3 +1,5 @@
+import kafka from "@/public/kafka-retrier.png";
+import survey from "@/public/survey.png";
 import {
   FaFacebook,
   FaGithub,
@@ -219,5 +221,22 @@ export const SOCIAL = [
   {
     Icon: FaTwitter,
     link: "https://x.com/_krish7x",
+  },
+];
+
+export const PROJECTS = [
+  {
+    title: "CL Survey Dashboard",
+    src: survey,
+    link: "https://github.com/krish7x/cl-survey-dashboard.git",
+    description:
+      "The CL Survey application is an innovative tool built on top of Next.js, designed to simplify the creation and management of surveys. Featuring a user-friendly interface with drag-and-drop functionality, it allows users to easily design surveys and analyze responses in real-time. The application ensures a smooth and responsive experience across all devices. It also offers customizable templates and seamless integration with popular platforms for data export and sharing. Our project won first place at the February 2024 hackathon, reflecting its effectiveness and user appeal.",
+  },
+  {
+    title: "Kafka Retrier NPM Package",
+    src: kafka,
+    link: "https://github.com/krish7x/kafka-retrier",
+    description:
+      "Kafka Retrier is a Node.js package that simplifies Kafka message retries and dead-letter-queue (DLQ) handling. Easily integrated with KafkaJS, it provides immediate and delayed retry mechanisms and supports custom logic for each. The package also includes a DLQ mechanism for unprocessable messages. Quick to install via npm, Kafka Retrier enhances the reliability of your Kafka message processing workflows.",
   },
 ];
