@@ -43,16 +43,14 @@ export default function Skills() {
                 >
                   <div className="flex items-center justify-center gap-2">
                     {val?.icon ? (
-                      <val.icon
-                        size={20}
-                        //className="fill-secondary dark:fill-custom2 dark:hover:fill-white"
-                      />
+                      <val.icon size={20} />
                     ) : (
                       <Image
                         src={val.src}
                         height={20}
                         width={20}
                         alt={val.name}
+                        className="h-5 w-5"
                       />
                     )}
                     <span className="text-xs dark:text-custom4">

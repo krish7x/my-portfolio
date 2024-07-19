@@ -1,4 +1,5 @@
 import { motion } from "framer-motion";
+import { ReactNode } from "react";
 
 export const Heading = ({ text }: { text: string }) => {
   return (
@@ -52,4 +53,30 @@ export const WorkCardDivider = () => (
 
 export const EducationCardDivider = () => (
   <div className="absolute right-1/2 top-full h-12 w-2 bg-blue-600 dark:bg-primary" />
+);
+
+export const MotionDiv = ({
+  children,
+  index,
+}: {
+  children: ReactNode;
+  index: number;
+}) => (
+  <motion.div
+    initial={{
+      opacity: 0,
+      x: index % 2 !== 0 ? 50 : -50,
+    }}
+    className="relative"
+    whileInView={{
+      opacity: 1,
+      x: 0,
+      transition: {
+        duration: 0.5,
+      },
+    }}
+    viewport={{ once: true }}
+  >
+    {children}
+  </motion.div>
 );
