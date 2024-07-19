@@ -1,10 +1,7 @@
 "use client";
 
-import WavyText from "@/components/animations/wavy-text";
 import { EducationCard } from "@/components/macros/education-card";
 import { ProjectCard } from "@/components/macros/project-card";
-import Skills from "@/components/macros/skills";
-import Social from "@/components/macros/social";
 import { WorkCard } from "@/components/macros/work-card";
 import {
   EducationCardDivider,
@@ -13,13 +10,25 @@ import {
   WorkCardDivider,
 } from "@/components/micros";
 import { EDUCATION, PROJECTS, WORK_EXPERIENCE } from "@/contants";
+import dynamic from "next/dynamic";
 import { useState } from "react";
+
+// Dynamic imports
+const WavyText = dynamic(() => import("@/components/animations/wavy-text"), {
+  ssr: false,
+});
+const Skills = dynamic(() => import("@/components/macros/skills"), {
+  ssr: false,
+});
+const Social = dynamic(() => import("@/components/macros/social"), {
+  ssr: false,
+});
 
 export default function Home() {
   const [readMore, setReadMore] = useState<number[]>([]);
   return (
     <>
-      {/* hero section */}
+      {/* Hero section */}
       <WavyText
         text="Hi, I am Krishna Kumar"
         replay={true}
@@ -49,12 +58,11 @@ export default function Home() {
         , and dreaming up the next big thing.
       </h2>
 
-      {/* body section */}
+      {/* Body section */}
       <div className="mt-8 flex max-w-full flex-col gap-12 overflow-hidden scrollbar-hide">
         {/* Work Experience */}
         <div className="flex flex-col gap-8">
           <Heading text="Work Experience 💼" />
-
           <div>
             {WORK_EXPERIENCE.map((val, inx, self) => (
               <MotionDiv
@@ -75,7 +83,7 @@ export default function Home() {
           </div>
         </div>
 
-        {/* Education  */}
+        {/* Education */}
         <div className="flex flex-col gap-8">
           <Heading text="Education 🎓" />
           <div className="flex flex-col gap-12">
