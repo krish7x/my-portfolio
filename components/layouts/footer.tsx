@@ -9,7 +9,7 @@ export default function Footer() {
   const pathname = usePathname();
   if (pathname !== "/") return null;
   return (
-    <div className="mr-8 flex flex-col items-center justify-center gap-4 px-4 py-4 md:py-6">
+    <div className="mr-8 flex flex-col items-center justify-center gap-4 px-4 pb-6 pt-4 md:py-6">
       <div className="flex gap-7 md:hidden">
         {SOCIAL.map(({ Icon, link }, index) => (
           <Link

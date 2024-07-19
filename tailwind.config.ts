@@ -37,6 +37,7 @@ module.exports = {
         custom4: "#E7E9EA",
         custom5: "#E5E5F9",
         custom6: "#67748b",
+        custom7: "#f3f2ff",
       },
       keyframes: {
         wave: {

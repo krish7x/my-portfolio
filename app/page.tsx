@@ -2,6 +2,7 @@
 
 import WavyText from "@/components/animations/wavy-text";
 import { EducationCard } from "@/components/macros/education-card";
+import { ProjectCard } from "@/components/macros/project-card";
 import Skills from "@/components/macros/skills";
 import Social from "@/components/macros/social";
 import { WorkCard } from "@/components/macros/work-card";
@@ -40,8 +41,10 @@ export default function Home() {
         domains. I love solving real-world problems with clean, simple and
         optimized solution. When I'm not coding, you’ll catch me sipping coffee,
         binge-watching{" "}
-        <span className="font-medium italic">Mr. Robot or Silicon Valley</span>,
-        and dreaming up the next big thing.
+        <span className="font-medium italic">
+          "Mr. Robot or Silicon Valley"
+        </span>
+        , and dreaming up the next big thing.
       </h2>
 
       {/* body section */}
@@ -118,6 +121,14 @@ export default function Home() {
               </motion.div>
             ))}
           </div>
+        </div>
+
+        {/* Projects */}
+        <div className="flex flex-col gap-6">
+          <Heading text="Projects 📋" />
+          <ProjectCard />
+          <ProjectCard />
+          <ProjectCard />
         </div>
 
         {/* Skills */}
