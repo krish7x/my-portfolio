@@ -1,5 +1,6 @@
 "use client";
 
+import WavyText from "@/components/animations/wavy-text";
 import { EducationCard } from "@/components/macros/education-card";
 import { ProjectCard } from "@/components/macros/project-card";
 import { WorkCard } from "@/components/macros/work-card";
@@ -13,10 +14,6 @@ import { EDUCATION, PROJECTS, WORK_EXPERIENCE } from "@/contants";
 import dynamic from "next/dynamic";
 import { useState } from "react";
 
-// Dynamic imports
-const WavyText = dynamic(() => import("@/components/animations/wavy-text"), {
-  ssr: false,
-});
 const Skills = dynamic(() => import("@/components/macros/skills"), {
   ssr: false,
 });
