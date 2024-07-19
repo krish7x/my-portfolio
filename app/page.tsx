@@ -9,10 +9,10 @@ import { WorkCard } from "@/components/macros/work-card";
 import {
   EducationCardDivider,
   Heading,
+  MotionDiv,
   WorkCardDivider,
 } from "@/components/micros";
 import { EDUCATION, PROJECTS, WORK_EXPERIENCE } from "@/contants";
-import { motion } from "framer-motion";
 import { useState } from "react";
 
 export default function Home() {
@@ -57,35 +57,20 @@ export default function Home() {
 
           <div>
             {WORK_EXPERIENCE.map((val, inx, self) => (
-              <div
-                className="relative"
+              <MotionDiv
                 key={"work-experience-card-" + inx}
+                index={inx}
               >
-                <motion.div
-                  initial={{
-                    opacity: 0,
-                    x: inx % 2 !== 0 ? 50 : -50,
-                  }}
-                  whileInView={{
-                    opacity: 1,
-                    x: 0,
-                    transition: {
-                      duration: 0.5,
-                    },
-                  }}
-                  viewport={{ once: true }}
-                >
-                  <WorkCard {...val} />
-                  {self.length > 1 && self.length - 1 !== inx && (
-                    <WorkCardDivider />
-                  )}
-                  {inx !== 0 && (
-                    <p className="absolute -top-11 text-[calc(13px)] text-custom6 vertical-lr dark:font-medium">
-                      {val.peroid}
-                    </p>
-                  )}
-                </motion.div>
-              </div>
+                <WorkCard {...val} />
+                {self.length > 1 && self.length - 1 !== inx && (
+                  <WorkCardDivider />
+                )}
+                {inx !== 0 && (
+                  <p className="absolute -top-11 text-[calc(13px)] text-custom6 vertical-lr dark:font-medium">
+                    {val.peroid}
+                  </p>
+                )}
+              </MotionDiv>
             ))}
           </div>
         </div>
@@ -95,20 +80,9 @@ export default function Home() {
           <Heading text="Education 🎓" />
           <div className="flex flex-col gap-12">
             {EDUCATION.map((val, inx, self) => (
-              <motion.div
-                key={"work-experience-card-" + inx}
-                initial={{
-                  opacity: 0,
-                  x: inx % 2 === 0 ? 50 : -50,
-                }}
-                whileInView={{
-                  opacity: 1,
-                  x: 0,
-                  transition: {
-                    duration: 0.5,
-                  },
-                }}
-                viewport={{ once: true }}
+              <MotionDiv
+                key={"education-card-" + inx}
+                index={inx}
               >
                 <div
                   className={`relative flex ${
@@ -120,7 +94,7 @@ export default function Home() {
                     <EducationCardDivider />
                   )}
                 </div>
-              </motion.div>
+              </MotionDiv>
             ))}
           </div>
         </div>
@@ -129,15 +103,19 @@ export default function Home() {
         <div className="flex flex-col gap-6">
           <Heading text="Projects 📋" />
           {PROJECTS.map((val, inx) => (
-            <ProjectCard
-              {...val}
-              key={"project-" + inx}
-              onReadMore={() => setReadMore([...readMore, inx])}
-              onReadLess={() =>
-                setReadMore(readMore.filter(val => val !== inx))
-              }
-              showFullDescription={readMore.includes(inx)}
-            />
+            <MotionDiv
+              key={"projects-card-" + inx}
+              index={inx}
+            >
+              <ProjectCard
+                {...val}
+                onReadMore={() => setReadMore([...readMore, inx])}
+                onReadLess={() =>
+                  setReadMore(readMore.filter(val => val !== inx))
+                }
+                showFullDescription={readMore.includes(inx)}
+              />
+            </MotionDiv>
           ))}
         </div>
 

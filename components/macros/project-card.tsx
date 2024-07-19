@@ -48,7 +48,7 @@ export const ProjectCard = ({
             {description}
             {description.length > 160 ? (
               <span
-                className="ml-2 cursor-pointer font-semibold text-custom4"
+                className="ml-2 cursor-pointer font-semibold text-cyan-950 dark:text-custom4"
                 onClick={onReadLess}
               >
                 read less
@@ -60,7 +60,7 @@ export const ProjectCard = ({
             {description.slice(0, 160)}
             {description.length > 160 ? (
               <span
-                className="ml-[calc(2px)] cursor-pointer font-semibold text-custom4"
+                className="ml-[calc(2px)] cursor-pointer font-semibold text-cyan-950 dark:text-custom4"
                 onClick={onReadMore}
               >
                 ...read more
