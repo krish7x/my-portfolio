@@ -13,8 +13,10 @@ import {
 } from "@/components/micros";
 import { EDUCATION, PROJECTS, WORK_EXPERIENCE } from "@/contants";
 import { motion } from "framer-motion";
+import { useState } from "react";
 
 export default function Home() {
+  const [readMore, setReadMore] = useState<number[]>([]);
   return (
     <>
       {/* hero section */}
@@ -130,6 +132,11 @@ export default function Home() {
             <ProjectCard
               {...val}
               key={"project-" + inx}
+              onReadMore={() => setReadMore([...readMore, inx])}
+              onReadLess={() =>
+                setReadMore(readMore.filter(val => val !== inx))
+              }
+              showFullDescription={readMore.includes(inx)}
             />
           ))}
         </div>
