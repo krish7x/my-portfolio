@@ -27,6 +27,7 @@ export const ProjectCard = ({
         alt="survey application"
         className="h-16 w-28 rounded-md border transition-all max-sm:h-full max-sm:w-1/2 md:group-hover/item:scale-110 md:group-hover/item:border-blue-300 dark:md:group-hover/item:border-inherit"
         src={src}
+        priority
       />
       <div>
         <Link

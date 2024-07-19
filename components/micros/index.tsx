@@ -57,15 +57,12 @@ export const EducationCardDivider = () => (
 
 export const MotionDiv = ({
   children,
-  key,
   index,
 }: {
   children: ReactNode;
-  key: string;
   index: number;
 }) => (
   <motion.div
-    key={key}
     initial={{
       opacity: 0,
       x: index % 2 !== 0 ? 50 : -50,
