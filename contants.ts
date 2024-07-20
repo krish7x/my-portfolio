@@ -1,4 +1,5 @@
 import kafka from "@/public/kafka-retrier.png";
+import portfolio from "@/public/portfolio.png";
 import survey from "@/public/survey.png";
 import {
   FaFacebook,
@@ -231,6 +232,17 @@ export const PROJECTS = [
     link: "https://github.com/krish7x/cl-survey-dashboard.git",
     description:
       "The CL Survey application is an innovative tool built on top of Next.js, designed to simplify the creation and management of surveys. Featuring a user-friendly interface with drag-and-drop functionality, it allows users to easily design surveys and analyze responses in real-time. The application ensures a smooth and responsive experience across all devices. It also offers customizable templates and seamless integration with popular platforms for data export and sharing. Our project won first place at the February 2024 hackathon, reflecting its effectiveness and user appeal.",
+    skills: [
+      "Typescript",
+      "NextJS",
+      "Turbo",
+      "Fastify",
+      "Prisma",
+      "Mongo",
+      "Framer Motion",
+      "Next UI",
+      "Jotai",
+    ],
   },
   {
     title: "Kafka Retrier NPM Package",
@@ -238,5 +250,20 @@ export const PROJECTS = [
     link: "https://github.com/krish7x/kafka-retrier",
     description:
       "Kafka Retrier is a Node.js package that simplifies Kafka message retries and dead-letter-queue (DLQ) handling. Easily integrated with KafkaJS, it provides immediate and delayed retry mechanisms and supports custom logic for each. The package also includes a DLQ mechanism for unprocessable messages. Quick to install via npm, Kafka Retrier enhances the reliability of your Kafka message processing workflows.",
+    skills: ["Typescript", "KafkaJS", "Tsup"],
+  },
+  {
+    title: "My Portfolio",
+    src: portfolio,
+    link: "https://github.com/krish7x/my-portfolio",
+    description:
+      "This is my personal portfolio, built using Next.js and Tailwind CSS. All components are custom-built, and the domain was purchased from GoDaddy and hosted on Vercel. Thanks to Vercel for seamless hosting and deployment services. You can check out the full code for this website on my GitHub. Exciting things are coming ahead!",
+    skills: [
+      "Typescript",
+      "NextJS",
+      "Framer Motion",
+      "Next UI",
+      "Contentlayer",
+    ],
   },
 ];
