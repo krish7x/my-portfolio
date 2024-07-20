@@ -1,4 +1,5 @@
 import kafka from "@/public/kafka-retrier.png";
+import portfolio from "@/public/portfolio.png";
 import survey from "@/public/survey.png";
 import {
   FaFacebook,
@@ -250,5 +251,19 @@ export const PROJECTS = [
     description:
       "Kafka Retrier is a Node.js package that simplifies Kafka message retries and dead-letter-queue (DLQ) handling. Easily integrated with KafkaJS, it provides immediate and delayed retry mechanisms and supports custom logic for each. The package also includes a DLQ mechanism for unprocessable messages. Quick to install via npm, Kafka Retrier enhances the reliability of your Kafka message processing workflows.",
     skills: ["Typescript", "KafkaJS", "Tsup"],
+  },
+  {
+    title: "My Portfolio",
+    src: portfolio,
+    link: "https://github.com/krish7x/my-portfolio",
+    description:
+      "This is my personal portfolio, built using Next.js and Tailwind CSS. All components are custom-built, and the domain was purchased from GoDaddy and hosted on Vercel. Thanks to Vercel for seamless hosting and deployment services. You can check out the full code for this website on my GitHub. Exciting things are coming ahead!",
+    skills: [
+      "Typescript",
+      "NextJS",
+      "Framer Motion",
+      "Next UI",
+      "Contentlayer",
+    ],
   },
 ];

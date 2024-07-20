@@ -28,34 +28,37 @@ export const ProjectCard = ({
         width={112}
         height={64}
         alt="survey application"
-        className="h-16 w-28 rounded-md border transition-all max-sm:h-full max-sm:w-1/2 md:group-hover/item:scale-110 md:group-hover/item:border-blue-300 dark:md:group-hover/item:border-inherit"
+        className="h-16 w-28 rounded-md border transition-all dark:border-white/10 max-sm:h-full max-sm:w-1/2 md:group-hover/item:scale-110"
         src={src}
         priority
       />
-      <div>
-        <Link
-          href={link}
-          target="__blank"
-        >
-          <h2 className="relative text-[calc(15px)] font-medium text-cyan-950 dark:text-custom4 md:text-base">
-            {title}
-            <span className="absolute bottom-[calc(2px)] ml-1 inline-block">
-              <HiOutlineExternalLink
-                width={24}
-                height={16}
-                opacity={0.7}
-                className="ml-[calc(2px)] inline-block h-4 w-4 shrink-0 translate-y-px transition-transform group-focus-visible/item:-translate-y-1 group-focus-visible/item:translate-x-1 motion-reduce:transition-none md:group-hover/item:-translate-y-1 md:group-hover/item:translate-x-1"
-              />
-            </span>
-          </h2>
-        </Link>
+
+      <Link
+        href={link}
+        target="__blank"
+      >
+        <h2 className="relative text-[calc(15px)] font-medium text-cyan-950 dark:text-custom4 md:text-base">
+          {title}
+          <span className="absolute bottom-[calc(2px)] ml-1 inline-block">
+            <HiOutlineExternalLink
+              width={24}
+              height={16}
+              opacity={0.7}
+              className="ml-[calc(2px)] inline-block h-4 w-4 shrink-0 translate-y-px transition-transform group-focus-visible/item:-translate-y-1 group-focus-visible/item:translate-x-1 motion-reduce:transition-none md:group-hover/item:-translate-y-1 md:group-hover/item:translate-x-1"
+            />
+          </span>
+        </h2>
+
         {showFullDescription ? (
           <p className="mt-2 inline-block text-[calc(13px)] text-sm font-medium !leading-6 text-slate-600 dark:text-custom3">
             {description}
             {description.length > 160 ? (
               <span
                 className="ml-2 cursor-pointer font-semibold text-cyan-950 dark:text-custom4"
-                onClick={onReadLess}
+                onClick={e => {
+                  e.preventDefault();
+                  onReadLess();
+                }}
               >
                 read less
               </span>
@@ -67,7 +70,10 @@ export const ProjectCard = ({
             {description.length > 160 ? (
               <span
                 className="ml-[calc(2px)] cursor-pointer font-semibold text-cyan-950 dark:text-custom4"
-                onClick={onReadMore}
+                onClick={e => {
+                  e.preventDefault();
+                  onReadMore();
+                }}
               >
                 ...read more
               </span>
@@ -90,7 +96,7 @@ export const ProjectCard = ({
             </div>
           ))}
         </div>
-      </div>
+      </Link>
     </div>
   );
 };
