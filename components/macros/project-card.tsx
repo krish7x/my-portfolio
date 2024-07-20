@@ -1,3 +1,4 @@
+import { Chip } from "@nextui-org/react";
 import Image, { StaticImageData } from "next/image";
 import Link from "next/link";
 import { HiOutlineExternalLink } from "react-icons/hi";
@@ -7,6 +8,7 @@ export const ProjectCard = ({
   title,
   description,
   link,
+  skills,
   showFullDescription = false,
   onReadMore,
   onReadLess,
@@ -14,6 +16,7 @@ export const ProjectCard = ({
   src: StaticImageData;
   title: string;
   description: string;
+  skills: string[];
   link: string;
   showFullDescription: boolean;
   onReadMore: () => void;
@@ -47,7 +50,7 @@ export const ProjectCard = ({
           </h2>
         </Link>
         {showFullDescription ? (
-          <p className="mt-2 inline-block text-[calc(13px)] font-medium !leading-6 text-slate-600 dark:text-custom3 md:text-sm">
+          <p className="mt-2 inline-block text-[calc(13px)] text-sm font-medium !leading-6 text-slate-600 dark:text-custom3">
             {description}
             {description.length > 160 ? (
               <span
@@ -59,7 +62,7 @@ export const ProjectCard = ({
             ) : null}
           </p>
         ) : (
-          <p className="mt-2 inline-block text-[calc(13px)] font-medium !leading-6 text-slate-600 dark:text-custom3 md:text-sm">
+          <p className="mt-2 inline-block text-[calc(13px)] text-sm font-medium !leading-6 text-slate-600 dark:text-custom3">
             {description.slice(0, 160)}
             {description.length > 160 ? (
               <span
@@ -71,6 +74,22 @@ export const ProjectCard = ({
             ) : null}
           </p>
         )}
+        <div className="mt-4 flex flex-wrap gap-2">
+          {skills?.map((val, inx) => (
+            <div key={"project-" + title + "-skill-" + inx}>
+              <Chip
+                size="sm"
+                classNames={{
+                  base: "!px-2 !py-1 bg-custom7 py-4 px-2 dark:bg-teal-400/10 flex border dark:border-white/10 md:group-hover/item:bg-white md:dark:group-hover/item:bg-teal-400/10",
+                  content:
+                    "font-medium text-xs text-cyan-950 dark:text-teal-300",
+                }}
+              >
+                {val}
+              </Chip>
+            </div>
+          ))}
+        </div>
       </div>
     </div>
   );
