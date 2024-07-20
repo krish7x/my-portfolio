@@ -28,6 +28,10 @@ export const Post = defineDocumentType(() => ({
       type: "date",
       required: true,
     },
+    minutesRead: {
+      type: "string",
+      required: true,
+    },
   },
   computedFields,
 }));

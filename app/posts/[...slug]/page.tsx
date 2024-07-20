@@ -49,7 +49,7 @@ export default async function PostPage({ params }: PostProps) {
   }
 
   return (
-    <article className="prose dark:prose-invert">
+    <article className="prose pb-4 dark:prose-invert">
       <h1 className="mb-2">{post.title}</h1>
       {post.description && (
         <p className="mt-4 text-xl text-slate-700 dark:text-slate-200">

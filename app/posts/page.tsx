@@ -8,15 +8,19 @@ export default function Home() {
   return (
     <div className="md:max-w-[872px]">
       <div className="mt-4 flex flex-col gap-5">
-        {allPosts.map(post => (
-          <PostCard
-            key={post._id}
-            title={post.title}
-            pubslishedData={format(post.date, "dd-MM-yyyy")}
-            readDuration="4 min read"
-            link={post.slug}
-          />
-        ))}
+        {allPosts
+          .sort(
+            (a, b) => new Date(b.date).getTime() - new Date(a.date).getTime(),
+          )
+          .map(post => (
+            <PostCard
+              key={post._id}
+              title={post.title}
+              pubslishedData={format(post.date, "dd-MM-yyyy")}
+              readDuration={post.minutesRead}
+              link={post.slug}
+            />
+          ))}
       </div>
     </div>
   );
