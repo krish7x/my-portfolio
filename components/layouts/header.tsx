@@ -1,6 +1,6 @@
 "use client";
 
-import { Avatar, Tab, Tabs } from "@nextui-org/react";
+import { Avatar, Skeleton, Tab, Tabs } from "@nextui-org/react";
 import Image from "next/image";
 import { usePathname, useRouter } from "next/navigation";
 import { Key, useEffect, useState } from "react";
@@ -11,7 +11,7 @@ import { ModeToggle } from "../micros/mode-toggle";
 export default function Header() {
   const pathname = usePathname();
   const router = useRouter();
-  const [hideTabs, setHideTabs] = useState(false);
+  const [hideTabs, setHideTabs] = useState(true);
   const [path, setPath] = useState(pathname);
 
   useEffect(() => {
@@ -36,7 +36,7 @@ export default function Header() {
           )}
           <ModeToggle />
         </div>
-        {!hideTabs && (
+        {!hideTabs ? (
           <div className="flex gap-2">
             <Tabs
               size="md"
@@ -57,7 +57,12 @@ export default function Header() {
               ))}
             </Tabs>
           </div>
-        )}
+        ) : pathname.split("/").length < 3 ? (
+          <div className="flex flex-col items-center justify-center gap-2">
+            <Skeleton className="h-2 w-32 rounded-lg" />
+            <Skeleton className="h-2 w-32 rounded-lg" />
+          </div>
+        ) : null}
       </div>
       <div className="h-full w-52 align-middle">
         {pathname === "/" ? (

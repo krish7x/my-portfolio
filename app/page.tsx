@@ -11,8 +11,9 @@ import {
   WorkCardDivider,
 } from "@/components/micros";
 import { EDUCATION, PROJECTS, WORK_EXPERIENCE } from "@/contants";
+import { Skeleton } from "@nextui-org/react";
 import dynamic from "next/dynamic";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 
 const Skills = dynamic(() => import("@/components/macros/skills"), {
   ssr: false,
@@ -23,15 +24,28 @@ const Social = dynamic(() => import("@/components/macros/social"), {
 
 export default function Home() {
   const [readMore, setReadMore] = useState<number[]>([]);
+  const [isLoaded, setIsLoaded] = useState(false);
+
+  useEffect(() => {
+    setIsLoaded(true);
+  }, []);
+
   return (
     <>
       {/* Hero section */}
-      <WavyText
-        text="Hi, I am Krishna Kumar"
-        replay={true}
-        className="text-lg font-medium text-custom1 dark:text-custom4 md:text-xl"
-        waveAnimation
-      />
+      {isLoaded ? (
+        <WavyText
+          text="Hi, I am Krishna Kumar"
+          replay={true}
+          className="text-lg font-medium text-custom1 dark:text-custom4 md:text-xl"
+          waveAnimation
+        />
+      ) : (
+        <div className="flex flex-col gap-2">
+          <Skeleton className="h-2 w-3/4 rounded-lg md:w-1/2" />
+          <Skeleton className="h-2 w-3/4 rounded-lg md:w-1/2" />
+        </div>
+      )}
 
       <h2 className="mt-4 text-medium leading-[calc(26px)] text-slate-600 dark:text-custom3">
         A caffeine-powered{" "}
