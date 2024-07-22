@@ -1,7 +1,9 @@
 import { Mdx } from "@/components/layouts/mdx-components";
 import { allPosts } from "contentlayer/generated";
 import { Metadata } from "next";
+import Link from "next/link";
 import { notFound } from "next/navigation";
+import { IoMdArrowBack } from "react-icons/io";
 
 interface PostProps {
   params: {
@@ -49,15 +51,25 @@ export default async function PostPage({ params }: PostProps) {
   }
 
   return (
-    <article className="prose pb-4 dark:prose-invert">
-      <h1 className="mb-2">{post.title}</h1>
-      {post.description && (
-        <p className="mt-4 text-xl text-slate-700 dark:text-slate-200">
-          {post.description}
-        </p>
-      )}
-      <hr className="my-4" />
-      <Mdx code={post.body.code} />
-    </article>
+    <>
+      <Link
+        href="/posts"
+        className="flex items-center gap-1 pb-6 pt-2 font-medium text-cyan-950 dark:text-custom4"
+      >
+        <IoMdArrowBack size={20} />
+        <p>Back to posts</p>
+      </Link>
+      <article className="prose pb-4 dark:prose-invert">
+        <h1 className="mb-2">{post.title}</h1>
+        {post.description && (
+          <p className="mt-4 text-xl text-slate-700 dark:text-slate-200">
+            {post.description}
+          </p>
+        )}
+        <hr className="my-4" />
+
+        <Mdx code={post.body.code} />
+      </article>
+    </>
   );
 }

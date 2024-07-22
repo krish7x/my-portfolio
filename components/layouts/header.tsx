@@ -25,7 +25,7 @@ export default function Header() {
   }, [path, pathname, router]);
 
   return (
-    <div className="h-50 flex w-full flex-col gap-12">
+    <div className="h-50 flex w-full flex-col">
       <div className="flex justify-between align-middle">
         <div className="flex gap-2 align-middle">
           {pathname !== "/" && (
@@ -74,6 +74,7 @@ export default function Header() {
               width: "100%",
               height: "auto",
             }}
+            className="pt-8"
             width={200}
             height={200}
           />

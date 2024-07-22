@@ -6,7 +6,7 @@ import { format } from "date-fns";
 
 export default function Home() {
   return (
-    <div className="md:max-w-[872px]">
+    <div className="pt-4 md:max-w-[872px]">
       <div className="mt-4 flex flex-col gap-5">
         {allPosts
           .sort(
