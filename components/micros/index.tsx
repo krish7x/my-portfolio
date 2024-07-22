@@ -89,7 +89,7 @@ export const Highlight = ({
   isHeading: boolean;
 }) => (
   <span
-    className={`text-custom8 bg-custom9 rounded-md px-[calc(6px)] py-1 ${isHeading ? "text-lg font-bold" : "text-sm font-semibold"}`}
+    className={`rounded-md bg-custom9 px-[calc(6px)] py-1 text-custom8 ${isHeading ? "text-lg font-bold" : "text-sm font-semibold"}`}
   >
     {children}
   </span>
