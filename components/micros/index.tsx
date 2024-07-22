@@ -80,3 +80,17 @@ export const MotionDiv = ({
     {children}
   </motion.div>
 );
+
+export const Highlight = ({
+  children,
+  isHeading,
+}: {
+  children: ReactNode;
+  isHeading: boolean;
+}) => (
+  <span
+    className={`text-custom8 bg-custom9 rounded-md px-[calc(6px)] py-1 ${isHeading ? "text-lg font-bold" : "text-sm font-semibold"}`}
+  >
+    {children}
+  </span>
+);
