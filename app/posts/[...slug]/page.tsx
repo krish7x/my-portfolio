@@ -54,7 +54,7 @@ export default async function PostPage({ params }: PostProps) {
     <>
       <Link
         href="/posts"
-        className="flex items-center gap-1 pb-6 pt-2 font-medium text-cyan-950 dark:text-custom4"
+        className="flex items-center gap-1 pb-6 pt-2 font-medium text-cyan-950 outline-none dark:text-custom4"
       >
         <IoMdArrowBack size={20} />
         <p>Back to posts</p>
