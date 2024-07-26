@@ -100,7 +100,7 @@ const fetcher = (url: string) =>
     .then(res => res.data);
 ```
 
-### Generating the URL with <Ht isHeading={true}>useMemo</Ht>
+### Generating the URL with <Ht isHeading>useMemo</Ht>
 
 To ensure our data fetching is efficient, we use <Ht>useMemo</Ht> to generate the URL based on dependencies. This ensures that the URL is only recalculated when one of the dependencies changes, avoiding unnecessary recomputations.
 
@@ -290,6 +290,8 @@ This approach leverages React hooks and SWR’s powerful features to create an e
 >
   <source src="https://portfolio-krish7x.s3.ap-south-1.amazonaws.com/report-table-recording.mov" />
 </video>
+
+<hr />
 
 ## Wrapping Up 🎉
 
