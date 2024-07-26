@@ -9,7 +9,7 @@ Hey there, tech enthusiasts! 👋🏻
 
 In our previous [adventure](https://www.krish7x.in/posts/reports-table-pagination), we delved into crafting **Reports Tables** with pagination using **NextUI** and **SWR**. Today, we're cranking up the excitement by diving into the realm of **CSV downloads** with **Asynchronous API** and **Node.js worker threads**. Ready to elevate your data game? Let’s dive in! 🚀
 
-## Client Side Implementation 🖥️
+## 🖥️ Client Side Implementation
 
 <a
   href="https://portfolio-krish7x.s3.ap-south-1.amazonaws.com/download_csv.gif"
@@ -24,7 +24,7 @@ In our previous [adventure](https://www.krish7x.in/posts/reports-table-paginatio
 
 When the user clicks that **Export CSV button**, our client-side code fires up a request to the <Ht>/reports/csv</Ht> API. The server responds with a Job Id, your key to tracking the CSV generation. We then repeatedly call the <Ht>/reports/csv?jobId=JOB_ID</Ht> API every second until the CSV URL is ready. If the process takes more than **60-90 seconds**, we terminate the operation and notify the user with a toast. Excited? Here’s a sneak peek at the implementation!
 
-## What is an Asynchronous API? 🧩
+## 🧩 What is an Asynchronous API?
 
 An asynchronous API is like having a superpower that lets your client request data while **continuing with other tasks**. Imagine needing to perform a **long-running operation** without triggering a **timeout**. Instead of holding a constant open connection, asynchronous APIs handle operations in the background. This means your client keeps moving while the server does the heavy lifting. Neat, right?
 
@@ -106,7 +106,7 @@ These responses keep you updated on the CSV generation progress. We keep polling
 
 With the client-side details in hand, let's switch gears to the server-side magic that makes this all possible 💻✨
 
-## Server Side Implementation 🛠️
+## 🛠️ Server Side Implementation
 
 On the server side, we orchestrate a series of operations to manage CSV generation and status checks. Here’s how it all comes together:
 
@@ -121,7 +121,7 @@ On the server side, we orchestrate a series of operations to manage CSV generati
   />
 </a>
 
-### **Sequence Diagram Breakdown** 🔍
+### 🔍 **Sequence Diagram Breakdown**
 
 Here's a visual tour of how everything unfolds behind the scenes:
 
@@ -150,7 +150,7 @@ Here's a visual tour of how everything unfolds behind the scenes:
    - **Action:** Once the job is done, the server provides the CSV URL to the client.
    - **Details:** The client can now download the freshly baked CSV file.
 
-## Server Side Code 🧑🏻‍💻
+## 🧑🏻‍💻 Server Side Code
 
 Here's the server-side code that drives our CSV download functionality. Crafted with **Next.js** and **worker threads**, this setup ensures efficient data processing.
 
