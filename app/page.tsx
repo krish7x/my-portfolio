@@ -54,7 +54,7 @@ export default function Home() {
         </span>{" "}
         with{" "}
         <span className="font-medium text-custom1 dark:text-custom4">
-          3.5 years
+          4+ years
         </span>{" "}
         of experience working in product companies across{" "}
         <span className="font-medium text-custom1 dark:text-custom4">

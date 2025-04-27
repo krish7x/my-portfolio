@@ -28,16 +28,24 @@ export const ROUTES = [
 
 export const WORK_EXPERIENCE = [
   {
-    yrsOfExp: "2023 - Present",
+    yrsOfExp: "2025 - Present",
     company: "Caratlane Trading Pvt Ltd",
-    role: "Software Engineer II",
+    role: "Senior Software Engineer I",
     location: "Chennai, Tamil Nadu",
     link: "https://www.caratlane.com",
   },
   {
+    yrsOfExp: "2023 - 2025",
+    company: "Caratlane Trading Pvt Ltd",
+    role: "Software Engineer II",
+    location: "Chennai, Tamil Nadu",
+    link: "https://www.caratlane.com",
+    peroid: "1 yr 10 mo",
+  },
+  {
     yrsOfExp: "2021 - 2023",
     company: "Pickyourtrail",
-    role: "SDE 1",
+    role: "SDE I",
     location: "Chennai, Tamil Nadu",
     link: "https://www.pickyourtrail.com",
     peroid: "2 yrs",
